@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct SettingsView: View {
     
     @State var isCarClosed = false
     @State var tagSelected = 0
     
     
     var body: some View {
-        backgroundStackView {
+        backgroundStackView(gradient: LinearGradient(colors: [.background], startPoint: .top, endPoint: .bottom)) {
             VStack {
                 headerView
                 carView
@@ -27,6 +27,7 @@ struct ContentView: View {
                 Spacer()
             }
         }
+        .navigationBarBackButtonHidden()
     }
     
     
@@ -116,18 +117,9 @@ struct ContentView: View {
         .padding(25)
     }
     
-    func backgroundStackView<Content: View>(content: () -> Content) -> some View {
-        ZStack {
-            Rectangle()
-                .fill(Color.background)
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .ignoresSafeArea(.all)
-            content()
-        }
-    }
 }
 
 #Preview {
-    ContentView()
+    SettingsView()
         
 }

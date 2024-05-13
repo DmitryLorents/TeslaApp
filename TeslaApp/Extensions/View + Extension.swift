@@ -24,4 +24,18 @@ extension View {
         modifier(NeumorphismSelectedCircle())
     }
     
+    func backgroundStackView<Content: View>(gradient: LinearGradient, content: () -> Content) -> some View {
+        ZStack {
+            Rectangle()
+                .fill(gradient)
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .ignoresSafeArea(.all)
+            content()
+        }
+    }
+    
+    func makeGreenBlueGradient() -> LinearGradient {
+        LinearGradient(colors: [.gradientTop, .gradientBottom], startPoint: .bottom, endPoint: .top)
+    }
+    
 }

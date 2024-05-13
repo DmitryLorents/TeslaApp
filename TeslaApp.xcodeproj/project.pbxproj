@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0AC2AEC62BF27A0200C0C144 /* TeslaAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC2AEC52BF27A0200C0C144 /* TeslaAppApp.swift */; };
-		0AC2AEC82BF27A0200C0C144 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC2AEC72BF27A0200C0C144 /* ContentView.swift */; };
+		0AC2AEC82BF27A0200C0C144 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC2AEC72BF27A0200C0C144 /* SettingsView.swift */; };
 		0AC2AECA2BF27A0400C0C144 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AC2AEC92BF27A0400C0C144 /* Assets.xcassets */; };
 		0AC2AECD2BF27A0400C0C144 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AC2AECC2BF27A0400C0C144 /* Preview Assets.xcassets */; };
 		0AC2AED52BF27D7E00C0C144 /* View + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC2AED42BF27D7E00C0C144 /* View + Extension.swift */; };
@@ -16,12 +16,13 @@
 		0AC2AEDC2BF27E1D00C0C144 /* NeumorphismSelected.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC2AEDB2BF27E1D00C0C144 /* NeumorphismSelected.swift */; };
 		0AC2AEDE2BF27E3C00C0C144 /* NeumorphismUnselectedCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC2AEDD2BF27E3C00C0C144 /* NeumorphismUnselectedCircle.swift */; };
 		0AC2AEE02BF28B2900C0C144 /* NeumorphismSelectedCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC2AEDF2BF28B2900C0C144 /* NeumorphismSelectedCircle.swift */; };
+		0AC2AEE32BF29CDD00C0C144 /* LockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC2AEE22BF29CDD00C0C144 /* LockView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0AC2AEC22BF27A0200C0C144 /* TeslaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeslaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AC2AEC52BF27A0200C0C144 /* TeslaAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeslaAppApp.swift; sourceTree = "<group>"; };
-		0AC2AEC72BF27A0200C0C144 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		0AC2AEC72BF27A0200C0C144 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		0AC2AEC92BF27A0400C0C144 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0AC2AECC2BF27A0400C0C144 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0AC2AED42BF27D7E00C0C144 /* View + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View + Extension.swift"; sourceTree = "<group>"; };
@@ -29,6 +30,7 @@
 		0AC2AEDB2BF27E1D00C0C144 /* NeumorphismSelected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeumorphismSelected.swift; sourceTree = "<group>"; };
 		0AC2AEDD2BF27E3C00C0C144 /* NeumorphismUnselectedCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeumorphismUnselectedCircle.swift; sourceTree = "<group>"; };
 		0AC2AEDF2BF28B2900C0C144 /* NeumorphismSelectedCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeumorphismSelectedCircle.swift; sourceTree = "<group>"; };
+		0AC2AEE22BF29CDD00C0C144 /* LockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,9 +111,26 @@
 		0AC2AEDA2BF27DE000C0C144 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				0AC2AEC72BF27A0200C0C144 /* ContentView.swift */,
+				0AC2AEE12BF29CC300C0C144 /* Lock */,
+				0AC2AEE42BF29FBD00C0C144 /* Settings */,
 			);
 			path = Modules;
+			sourceTree = "<group>";
+		};
+		0AC2AEE12BF29CC300C0C144 /* Lock */ = {
+			isa = PBXGroup;
+			children = (
+				0AC2AEE22BF29CDD00C0C144 /* LockView.swift */,
+			);
+			path = Lock;
+			sourceTree = "<group>";
+		};
+		0AC2AEE42BF29FBD00C0C144 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				0AC2AEC72BF27A0200C0C144 /* SettingsView.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,10 +204,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				0AC2AEE02BF28B2900C0C144 /* NeumorphismSelectedCircle.swift in Sources */,
-				0AC2AEC82BF27A0200C0C144 /* ContentView.swift in Sources */,
+				0AC2AEC82BF27A0200C0C144 /* SettingsView.swift in Sources */,
 				0AC2AED82BF27DBD00C0C144 /* NeumorphismUnselected.swift in Sources */,
 				0AC2AEDC2BF27E1D00C0C144 /* NeumorphismSelected.swift in Sources */,
 				0AC2AEC62BF27A0200C0C144 /* TeslaAppApp.swift in Sources */,
+				0AC2AEE32BF29CDD00C0C144 /* LockView.swift in Sources */,
 				0AC2AED52BF27D7E00C0C144 /* View + Extension.swift in Sources */,
 				0AC2AEDE2BF27E3C00C0C144 /* NeumorphismUnselectedCircle.swift in Sources */,
 			);
