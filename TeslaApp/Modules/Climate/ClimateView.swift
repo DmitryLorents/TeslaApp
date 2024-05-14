@@ -88,6 +88,7 @@ var buttonsView: some View {
             HStack {
                 
             }
+            .padding(.horizontal, 30)
             
         }
     }
