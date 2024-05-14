@@ -18,9 +18,14 @@ struct ClimateView: View {
     }
     
     @Environment (\.dismiss) var dismiss
+    @State var temparature = 0.0
     var body: some View {
         VStack {
             navBarView
+            Spacer()
+                .frame(height: 125)
+            climateCircleView
+            Spacer()
         }
         .navigationBarBackButtonHidden()
     }
@@ -57,8 +62,38 @@ struct ClimateView: View {
         }
         .padding(.horizontal, 30)
     }
+    
+    var climateCircleView: some View {
+        Circle()
+            .fill(.black)
+            .frame(width: 168)
+            .neumorphismUnselectedStyle()
+            .overlay(
+        Circle()
+            .fill(LinearGradient(colors: [.lightShadow, .darkShadow], startPoint: .bottomTrailing, endPoint: .topLeading))
+            .frame(width: 120)
+        )
+            .overlay(
+            Text(String(Int(temparature)))
+                .font(.system(size: 54))
+                .foregroundStyle(.darkElement)
+            )
+    }
+}
+
+var buttonsView: some View {
+    DisclosureGroup("") {
+        VStack{
+            
+            HStack {
+                
+            }
+            
+        }
+    }
 }
 
 #Preview {
     ClimateView()
+        
 }
