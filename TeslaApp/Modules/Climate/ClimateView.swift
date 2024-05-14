@@ -18,21 +18,33 @@ struct ClimateView: View {
     }
     
     @Environment (\.dismiss) var dismiss
-    @State var temparature = 0.0
+    @State var temparature = 15.0
+    @State var colorSlider = Color.blue
+    @State var fanSpeed = 0.0
+    @State var heatValue = 0.0
+    @State var autoValue = 0.0
+    
+    
     var body: some View {
         VStack {
             navBarView
             Spacer()
-                .frame(height: 125)
             climateCircleView
+            Spacer()
+                .frame(height: 50)
+            buttonsView
             Spacer()
         }
         .navigationBarBackButtonHidden()
+        .onAppear() {
+            UISlider.appearance().setThumbImage(.knob, for: .normal)
+            UISlider.appearance().minimumTrackTintColor = UIColor(colorSlider)
+        }
     }
     
     var navBarView: some View {
         HStack {
-           
+            
             Button {
                 dismiss()
             } label: {
@@ -56,9 +68,9 @@ struct ClimateView: View {
                         .padding()
                         .neumorphismSelectedCircleStyle()
                 }
-                    
+                
             }
-
+            
         }
         .padding(.horizontal, 30)
     }
@@ -68,33 +80,75 @@ struct ClimateView: View {
             .fill(.black)
             .frame(width: 168)
             .neumorphismUnselectedStyle()
+            .padding(4)
             .overlay(
-        Circle()
-            .fill(LinearGradient(colors: [.lightShadow, .darkShadow], startPoint: .bottomTrailing, endPoint: .topLeading))
-            .frame(width: 120)
-        )
+                Circle()
+                    .trim(from: 0.0, to: CGFloat(temparature - 15) / 15)
+                    .stroke(colorSlider, style: StrokeStyle(lineWidth: 20, lineCap: .round))
+                    .rotationEffect(.degrees(-90))
+            )
             .overlay(
-            Text(String(Int(temparature)))
-                .font(.system(size: 54))
-                .foregroundStyle(.darkElement)
+                Circle()
+                    .fill(LinearGradient(colors: [.lightShadow, .darkShadow], startPoint: .bottomTrailing, endPoint: .topLeading))
+                    .frame(width: 120)
+            )
+            .overlay(
+                Text(String(Int(temparature)))
+                    .font(.system(size: 54))
+                    .foregroundStyle(.darkElement)
             )
     }
-}
-
-var buttonsView: some View {
-    DisclosureGroup("") {
+    
+    
+    var buttonsView: some View {
+        //        DisclosureGroup("") {
         VStack{
             
-            HStack {
+            sliderView(range: 15.0...30.0, value: $temparature, text: Constants.ac, image: .ac)
+            sliderView(range: 0.0...1.0, value: $fanSpeed, text: Constants.fun, image: .fan)
+            sliderView(range: 0.0...1.0, value: $heatValue, text: Constants.heat, image: .heat)
+            sliderView(range: 0.0...1.0, value: $autoValue, text: Constants.auto, image: .auto)
+            
+        }
+        //        }
+        //        .padding(.horizontal)
+        .accentColor(.blue)
+    }
+    
+    struct sliderView:  View {
+        var range: ClosedRange<Double>
+        @Binding var value: Double
+        var text: String
+        var image: ImageResource
+        
+        var body: some View {
+            
+            HStack() {
+                Text(text)
+                    .frame(width: 40, alignment: .leading)
+                Spacer()
+                    .frame(width: 20)
+                Image(image)
+                    .resizable()
+                    .frame(width: 50, height: 50)
+                    .padding(.zero)
+                    .neumorphismSelectedCircleStyle()
                 
+                Spacer()
+                    .frame(width: 30)
+                
+                Slider(value: $value, in: range)
             }
             .padding(.horizontal, 30)
-            
+            .padding(.top, 20)
+            .font(.system(size: 17)
+                .weight(.semibold))
+            .foregroundStyle(.darkElement)
         }
     }
 }
 
 #Preview {
     ClimateView()
-        
+    
 }
