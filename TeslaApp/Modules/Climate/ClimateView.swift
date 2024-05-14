@@ -101,51 +101,20 @@ struct ClimateView: View {
     
     
     var buttonsView: some View {
-        //        DisclosureGroup("") {
+                DisclosureGroup("") {
         VStack{
             
-            sliderView(range: 15.0...30.0, value: $temparature, text: Constants.ac, image: .ac)
-            sliderView(range: 0.0...1.0, value: $fanSpeed, text: Constants.fun, image: .fan)
-            sliderView(range: 0.0...1.0, value: $heatValue, text: Constants.heat, image: .heat)
-            sliderView(range: 0.0...1.0, value: $autoValue, text: Constants.auto, image: .auto)
+            SliderView(range: 15.0...30.0, value: $temparature, text: Constants.ac, image: .ac)
+            SliderView(range: 0.0...1.0, value: $fanSpeed, text: Constants.fun, image: .fan)
+            SliderView(range: 0.0...1.0, value: $heatValue, text: Constants.heat, image: .heat)
+            SliderView(range: 0.0...1.0, value: $autoValue, text: Constants.auto, image: .auto)
             
         }
-        //        }
-        //        .padding(.horizontal)
+                }
+                .padding(.horizontal)
         .accentColor(.blue)
     }
     
-    struct sliderView:  View {
-        var range: ClosedRange<Double>
-        @Binding var value: Double
-        var text: String
-        var image: ImageResource
-        
-        var body: some View {
-            
-            HStack() {
-                Text(text)
-                    .frame(width: 40, alignment: .leading)
-                Spacer()
-                    .frame(width: 20)
-                Image(image)
-                    .resizable()
-                    .frame(width: 50, height: 50)
-                    .padding(.zero)
-                    .neumorphismSelectedCircleStyle()
-                
-                Spacer()
-                    .frame(width: 30)
-                
-                Slider(value: $value, in: range)
-            }
-            .padding(.horizontal, 30)
-            .padding(.top, 20)
-            .font(.system(size: 17)
-                .weight(.semibold))
-            .foregroundStyle(.darkElement)
-        }
-    }
 }
 
 #Preview {
