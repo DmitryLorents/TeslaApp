@@ -17,6 +17,7 @@
 		0AC2AEDE2BF27E3C00C0C144 /* NeumorphismUnselectedCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC2AEDD2BF27E3C00C0C144 /* NeumorphismUnselectedCircle.swift */; };
 		0AC2AEE02BF28B2900C0C144 /* NeumorphismSelectedCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC2AEDF2BF28B2900C0C144 /* NeumorphismSelectedCircle.swift */; };
 		0AC2AEE32BF29CDD00C0C144 /* LockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC2AEE22BF29CDD00C0C144 /* LockView.swift */; };
+		0AC2AF012BF38AA700C0C144 /* ClimateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC2AF002BF38AA700C0C144 /* ClimateView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		0AC2AEDD2BF27E3C00C0C144 /* NeumorphismUnselectedCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeumorphismUnselectedCircle.swift; sourceTree = "<group>"; };
 		0AC2AEDF2BF28B2900C0C144 /* NeumorphismSelectedCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeumorphismSelectedCircle.swift; sourceTree = "<group>"; };
 		0AC2AEE22BF29CDD00C0C144 /* LockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockView.swift; sourceTree = "<group>"; };
+		0AC2AF002BF38AA700C0C144 /* ClimateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClimateView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 		0AC2AEDA2BF27DE000C0C144 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				0AC2AEFF2BF38A9700C0C144 /* Climate */,
 				0AC2AEE12BF29CC300C0C144 /* Lock */,
 				0AC2AEE42BF29FBD00C0C144 /* Settings */,
 			);
@@ -131,6 +134,14 @@
 				0AC2AEC72BF27A0200C0C144 /* SettingsView.swift */,
 			);
 			path = Settings;
+			sourceTree = "<group>";
+		};
+		0AC2AEFF2BF38A9700C0C144 /* Climate */ = {
+			isa = PBXGroup;
+			children = (
+				0AC2AF002BF38AA700C0C144 /* ClimateView.swift */,
+			);
+			path = Climate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,6 +222,7 @@
 				0AC2AEE32BF29CDD00C0C144 /* LockView.swift in Sources */,
 				0AC2AED52BF27D7E00C0C144 /* View + Extension.swift in Sources */,
 				0AC2AEDE2BF27E3C00C0C144 /* NeumorphismUnselectedCircle.swift in Sources */,
+				0AC2AF012BF38AA700C0C144 /* ClimateView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
