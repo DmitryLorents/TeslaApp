@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0A26332D2BF3E6EB005B3096 /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A26332C2BF3E6EB005B3096 /* SliderView.swift */; };
+		0A2633302BF3E93C005B3096 /* BottomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A26332F2BF3E93C005B3096 /* BottomSheet.swift */; };
+		0A2633322BF3F485005B3096 /* BottomMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2633312BF3F485005B3096 /* BottomMenu.swift */; };
 		0AC2AEC62BF27A0200C0C144 /* TeslaAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC2AEC52BF27A0200C0C144 /* TeslaAppApp.swift */; };
 		0AC2AEC82BF27A0200C0C144 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC2AEC72BF27A0200C0C144 /* SettingsView.swift */; };
 		0AC2AECA2BF27A0400C0C144 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AC2AEC92BF27A0400C0C144 /* Assets.xcassets */; };
@@ -23,6 +25,8 @@
 
 /* Begin PBXFileReference section */
 		0A26332C2BF3E6EB005B3096 /* SliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
+		0A26332F2BF3E93C005B3096 /* BottomSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheet.swift; sourceTree = "<group>"; };
+		0A2633312BF3F485005B3096 /* BottomMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomMenu.swift; sourceTree = "<group>"; };
 		0AC2AEC22BF27A0200C0C144 /* TeslaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeslaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AC2AEC52BF27A0200C0C144 /* TeslaAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeslaAppApp.swift; sourceTree = "<group>"; };
 		0AC2AEC72BF27A0200C0C144 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -48,6 +52,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A26332E2BF3E92C005B3096 /* SubView */ = {
+			isa = PBXGroup;
+			children = (
+				0A26332C2BF3E6EB005B3096 /* SliderView.swift */,
+				0A26332F2BF3E93C005B3096 /* BottomSheet.swift */,
+				0A2633312BF3F485005B3096 /* BottomMenu.swift */,
+			);
+			path = SubView;
+			sourceTree = "<group>";
+		};
 		0AC2AEB92BF27A0200C0C144 = {
 			isa = PBXGroup;
 			children = (
@@ -142,7 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				0AC2AF002BF38AA700C0C144 /* ClimateView.swift */,
-				0A26332C2BF3E6EB005B3096 /* SliderView.swift */,
+				0A26332E2BF3E92C005B3096 /* SubView */,
 			);
 			path = Climate;
 			sourceTree = "<group>";
@@ -219,12 +233,14 @@
 			files = (
 				0AC2AEE02BF28B2900C0C144 /* NeumorphismSelectedCircle.swift in Sources */,
 				0AC2AEC82BF27A0200C0C144 /* SettingsView.swift in Sources */,
+				0A2633302BF3E93C005B3096 /* BottomSheet.swift in Sources */,
 				0AC2AED82BF27DBD00C0C144 /* NeumorphismUnselected.swift in Sources */,
 				0AC2AEDC2BF27E1D00C0C144 /* NeumorphismSelected.swift in Sources */,
 				0AC2AEC62BF27A0200C0C144 /* TeslaAppApp.swift in Sources */,
 				0AC2AEE32BF29CDD00C0C144 /* LockView.swift in Sources */,
 				0AC2AED52BF27D7E00C0C144 /* View + Extension.swift in Sources */,
 				0AC2AEDE2BF27E3C00C0C144 /* NeumorphismUnselectedCircle.swift in Sources */,
+				0A2633322BF3F485005B3096 /* BottomMenu.swift in Sources */,
 				0AC2AF012BF38AA700C0C144 /* ClimateView.swift in Sources */,
 				0A26332D2BF3E6EB005B3096 /* SliderView.swift in Sources */,
 			);

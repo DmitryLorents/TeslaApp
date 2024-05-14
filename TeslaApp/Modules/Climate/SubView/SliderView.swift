@@ -31,7 +31,6 @@ struct SliderView:  View {
             
             Slider(value: $value, in: range)
         }
-//        .padding(.horizontal, 30)
         .padding(.top, 20)
         .font(.system(size: 17)
             .weight(.semibold))
