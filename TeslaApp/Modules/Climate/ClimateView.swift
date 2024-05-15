@@ -29,15 +29,18 @@ struct ClimateView: View {
     var body: some View {
         VStack {
             navBarView
-//            Spacer()
-            climateCircleView
-            Spacer()
-                .frame(height: 50)
-            buttonsView
+            ScrollView {
+                climateCircleView
+                    .padding(.top, 113)
+                Spacer()
+                    .frame(height: 50)
+                slidersView
+            }
+            .scrollIndicators(.hidden)
             Spacer()
         }
         .navigationBarBackButtonHidden()
-
+        
     }
     
     var navBarView: some View {
@@ -84,7 +87,7 @@ struct ClimateView: View {
                     .trim(from: 0.0, to: CGFloat(temparature - 15) / 15)
                     .stroke(temparatureColor, style: StrokeStyle(lineWidth: 20, lineCap: .round))
                     .rotationEffect(.degrees(-90))
-                    
+                
             )
             .overlay(
                 Circle()
@@ -99,23 +102,26 @@ struct ClimateView: View {
     }
     
     
-    var buttonsView: some View {
-                DisclosureGroup("") {
-                    ScrollView {
-                        VStack{
-                            
-                            SliderView(range: 15.0...30.0, value: $temparature, text: Constants.ac, image: .ac)
-                            SliderView(range: 0.0...1.0, value: $fanSpeed, text: Constants.fun, image: .fan)
-                            SliderView(range: 0.0...1.0, value: $heatValue, text: Constants.heat, image: .heat)
-                            SliderView(range: 0.0...1.0, value: $autoValue, text: Constants.auto, image: .auto)
-                        }
-                    }
-                }
-                .padding(.horizontal)
-                .font(.title)
-                .bold()
-                .foregroundStyle(.white)
-//        .accentColor(.blue)
+    var slidersView: some View {
+        DisclosureGroup("") {
+            
+            VStack{
+                SliderView(range: 15.0...30.0, value: $temparature, text: Constants.ac, image: .ac)
+                SliderView(range: 0.0...1.0, value: $fanSpeed, text: Constants.fun, image: .fan)
+                SliderView(range: 0.0...1.0, value: $heatValue, text: Constants.heat, image: .heat)
+                SliderView(range: 0.0...1.0, value: $autoValue, text: Constants.auto, image: .auto)
+                Rectangle()
+                    .fill(.clear)
+                    .frame(height: 200)
+            }
+            
+            
+        }
+        .padding(.horizontal)
+        .font(.title)
+        .bold()
+        .foregroundStyle(.white)
+        .tint(.blue)
     }
     
 }

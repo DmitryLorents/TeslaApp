@@ -14,6 +14,7 @@ struct BottomSheet: View {
     @State private var lastMenuOffsetY: CGFloat = 0.0
     @State var selectedColor = Color.red
     @State var temperature = 15.0
+    @State var isOpen = false
     private var temperatureRange = 15.0...30.0
     
     var gesture: some Gesture {
@@ -24,7 +25,7 @@ struct BottomSheet: View {
             }
         
             .onEnded { value in
-                let maxHeight = UIScreen.main.bounds.height - 100
+                let maxHeight =  CGFloat(100)
                 withAnimation {
                     if -currentMenuOffsetY > maxHeight / 2 {
                         currentMenuOffsetY = -maxHeight
@@ -40,18 +41,22 @@ struct BottomSheet: View {
         ZStack {
             
             ClimateView(temparature: $temperature, temparatureColor: $selectedColor)
-                .offset(y: 300)
+//                .offset(y: 300)
             
             BottomMenu(selectedColor: $selectedColor, temperature: $temperature, temperatureRange: temperatureRange)
-            
-                .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height + 500)
+//
+                            .frame(height: UIScreen.main.bounds.height - 500)
                 .background(RoundedRectangle(cornerRadius: 40)
                     .fill(LinearGradient(colors: [.bottomSheetTopGradient, .bottomSheetBottomGradient], startPoint: .top, endPoint: .bottom))
                 )
-                .ignoresSafeArea(.all)
-                .offset(y: UIScreen.main.bounds.height)
+//                .frame(height: 200)
+//                .ignoresSafeArea(.all)
+                .offset(y: UIScreen.main.bounds.height - 405)
                 .offset(y: currentMenuOffsetY)
                 .gesture(gesture)
+                .onTapGesture {
+                    currentMenuOffsetY = -100
+                }
 
             
         }
@@ -70,7 +75,11 @@ struct BottomSheet: View {
     
     func onChangeMenuOffset() {
         DispatchQueue.main.async {
-            currentMenuOffsetY = gestureOffset.height + lastMenuOffsetY
+            if gestureOffset.height + lastMenuOffsetY < 500 {
+                currentMenuOffsetY = gestureOffset.height + lastMenuOffsetY
+            } else {
+                currentMenuOffsetY = 500
+            }
         }
     }
 }

@@ -47,9 +47,7 @@ struct BottomMenu: View {
                 Button(action: {
                     
                 }, label: {
-
                     onOffButton
-                    
                 })
                 .offset(x: 10)
                 
