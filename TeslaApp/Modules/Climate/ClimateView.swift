@@ -15,6 +15,9 @@ struct ClimateView: View {
         static let fun = "Fan"
         static let heat = "Heat"
         static let auto = "Auto"
+        static let support = "Tesla Support"
+        static let urlString = "https://www.tesla.com/support "
+        static let ok = "OK"
     }
     
     @Environment (\.dismiss) var dismiss
@@ -25,23 +28,64 @@ struct ClimateView: View {
     @State var fanSpeed = 0.0
     @State var heatValue = 0.0
     @State var autoValue = 0.0
+    @State var isAlertShown = false
     
     
     
     var body: some View {
-        VStack {
-            navBarView
-            ScrollView {
-                climateCircleView
-                    .padding(.top, 113)
+        ZStack {
+            
+            VStack {
+                navBarView
+                ScrollView {
+                    climateCircleView
+                        .padding(.top, 113)
+                    Spacer()
+                        .frame(height: 50)
+                    slidersView
+                }
+                .scrollIndicators(.hidden)
                 Spacer()
-                    .frame(height: 50)
-                slidersView
             }
-            .scrollIndicators(.hidden)
-            Spacer()
+            .navigationBarBackButtonHidden()
+            
+            
+            alertView
+                .opacity(isAlertShown ? 1 : 0)
+                .offset(x: isAlertShown ? 0 : 60, y: isAlertShown ? 0 : -200)
+            
+            
         }
-        .navigationBarBackButtonHidden()
+        
+    }
+    
+    var alertView: some View {
+        VStack{
+            Link(destination: URL(string: Constants.urlString)!, label: {
+                Text(Constants.support)
+                    .font(.title)
+                    .bold()
+                    .padding(20)
+                    .transition(.opacity.combined(with: .scale))
+            })
+            
+            Divider()
+                .frame(maxWidth: 220)
+                .overlay(
+                    Color.white
+                )
+            
+            Button(Constants.ok) {
+                withAnimation {
+                    isAlertShown = false
+                }
+            }
+            .padding(8)
+        }
+        .background(
+            RoundedRectangle(cornerRadius: 10)
+                .fill(.bottomSheetTopGradient)
+        )
         
     }
     
@@ -63,14 +107,17 @@ struct ClimateView: View {
                     .font(.system(size: 20, weight: .semibold))
                 
                 Spacer()
-                
-                NavigationLink(destination: SettingsView()) {
+                Button(action: {
+                    withAnimation(.easeInOut(duration: 1)) {
+                        isAlertShown = true
+                    }
+                }, label: {
                     Image(.settings)
                         .resizable()
                         .frame(width: 22, height: 22)
                         .padding()
                         .neumorphismSelectedCircleStyle()
-                }
+                })
                 
             }
             
@@ -89,6 +136,7 @@ struct ClimateView: View {
                     .trim(from: 0.0, to: CGFloat(temparature - 15) / 15)
                     .stroke(temparatureColor, style: StrokeStyle(lineWidth: 20, lineCap: .round))
                     .rotationEffect(.degrees(-90))
+                    .shadow(color: temparatureColor, radius: 10)
                     .opacity(isAcOn ? 1: 0)
                 
             )

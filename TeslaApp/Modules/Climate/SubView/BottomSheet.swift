@@ -12,7 +12,7 @@ struct BottomSheet: View {
     @GestureState private var gestureOffset = CGSize.zero
     @State private var currentMenuOffsetY: CGFloat = 0.0
     @State private var lastMenuOffsetY: CGFloat = 0.0
-    @State var selectedColor = Color.red
+    @State var selectedColor = Color.buttonBottomGradient
     @State var temperature = 15.0
     @State var isAcOn = false
     private var temperatureRange = 15.0...30.0
