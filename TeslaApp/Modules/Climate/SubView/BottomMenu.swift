@@ -15,6 +15,9 @@ struct BottomMenu: View {
         static let on = "On"
         static let vent = "Vent"
     }
+    
+    @Binding var selectedColor: Color
+    
     var body: some View {
         VStack {
             Capsule()
@@ -38,34 +41,47 @@ struct BottomMenu: View {
                 Button(action: {
                     
                 }, label: {
-                    Circle()
-                        .fill(LinearGradient(colors: [.buttonBottomGradient, .buttonTopGradient], startPoint: .topLeading, endPoint: .bottomTrailing))
-                        .frame(width: 80, height: 80)
-                        .overlay(
-                            Circle()
-                                .fill(LinearGradient(colors: [.buttonTopGradient, .buttonBottomGradient], startPoint: .topLeading, endPoint: .bottomTrailing))
-                                .frame(width: 70, height: 70)
-                                .overlay(
-                                    Image(.onOff)
-                                        .renderingMode(.template)
-                                        .resizable()
-                                        .frame(width: 25, height: 25)
-                                        .foregroundStyle(.white.opacity(0.6))
-                                )
-                        )
+
+                    onOffButton
                     
-                        
                 })
                 
             }
             .padding(.horizontal, 14)
+            
+            HStack {
+                ColorPicker("", selection: $selectedColor)
+            }
+            
             Spacer()
+            
+            
             
                 
         }
         .frame(maxWidth: .infinity)
         
     }
+    
+    private var onOffButton: some View {
+        Circle()
+            .fill(LinearGradient(colors: [.buttonBottomGradient, .buttonTopGradient], startPoint: .topLeading, endPoint: .bottomTrailing))
+            .frame(width: 80, height: 80)
+            .overlay(
+                Circle()
+                    .fill(LinearGradient(colors: [.buttonTopGradient, .buttonBottomGradient], startPoint: .topLeading, endPoint: .bottomTrailing))
+                    .frame(width: 70, height: 70)
+                    .overlay(
+                        Image(.onOff)
+                            .renderingMode(.template)
+                            .resizable()
+                            .frame(width: 25, height: 25)
+                            .foregroundStyle(.white.opacity(0.6))
+                        
+                    )
+            )
+    }
+    
 }
 
 #Preview {

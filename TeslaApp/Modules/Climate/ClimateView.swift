@@ -19,16 +19,17 @@ struct ClimateView: View {
     
     @Environment (\.dismiss) var dismiss
     @State var temparature = 15.0
-    @State var colorSlider = Color.blue
+    @Binding var temparatureColor: Color
     @State var fanSpeed = 0.0
     @State var heatValue = 0.0
     @State var autoValue = 0.0
     
     
+    
     var body: some View {
         VStack {
             navBarView
-            Spacer()
+//            Spacer()
             climateCircleView
             Spacer()
                 .frame(height: 50)
@@ -36,10 +37,10 @@ struct ClimateView: View {
             Spacer()
         }
         .navigationBarBackButtonHidden()
-        .onAppear() {
-            UISlider.appearance().setThumbImage(.knob, for: .normal)
-            UISlider.appearance().minimumTrackTintColor = UIColor(colorSlider)
-        }
+//        .onAppear() {
+//            UISlider.appearance().setThumbImage(.knob, for: .normal)
+//            UISlider.appearance().minimumTrackTintColor = UIColor(temparatureColor)
+//        }
     }
     
     var navBarView: some View {
@@ -84,7 +85,7 @@ struct ClimateView: View {
             .overlay(
                 Circle()
                     .trim(from: 0.0, to: CGFloat(temparature - 15) / 15)
-                    .stroke(colorSlider, style: StrokeStyle(lineWidth: 20, lineCap: .round))
+                    .stroke(temparatureColor, style: StrokeStyle(lineWidth: 20, lineCap: .round))
                     .rotationEffect(.degrees(-90))
             )
             .overlay(
@@ -117,7 +118,7 @@ struct ClimateView: View {
     
 }
 
-#Preview {
-    ClimateView()
-    
-}
+//#Preview {
+////    ClimateView(temparatureColor: Color.red)
+//    
+//}

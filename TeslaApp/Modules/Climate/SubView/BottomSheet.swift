@@ -12,6 +12,7 @@ struct BottomSheet: View {
     @GestureState private var gestureOffset = CGSize.zero
     @State private var currentMenuOffsetY: CGFloat = 0.0
     @State private var lastMenuOffsetY: CGFloat = 0.0
+    @State var selectedColor = Color.red
     
     var gesture: some Gesture {
         DragGesture()
@@ -36,10 +37,16 @@ struct BottomSheet: View {
     var body: some View {
         ZStack {
             
-            ClimateView()
-                .offset(y: 100)
+            ClimateView(temparatureColor: $selectedColor)
+                .offset(y: 300)
             
-            BottomMenu()
+//            Text("Some text")
+//                .foregroundStyle(selectedColor)
+//                .onTapGesture {
+//                    selectedColor = .orange
+//                }
+            
+            BottomMenu(selectedColor: $selectedColor)
                 .frame(height: UIScreen.main.bounds.height + 500)
                 .background(RoundedRectangle(cornerRadius: 40)
                     .fill(LinearGradient(colors: [.bottomSheetTopGradient, .bottomSheetBottomGradient], startPoint: .top, endPoint: .bottom))
@@ -48,9 +55,21 @@ struct BottomSheet: View {
                 .offset(y: UIScreen.main.bounds.height)
                 .offset(y: currentMenuOffsetY)
                 .gesture(gesture)
+
             
         }
+        .onChange(of: selectedColor) {
+            print("On change")
+            print(selectedColor)
+            UISlider.appearance().setThumbImage(.knob, for: .normal)
+                        UISlider.appearance().minimumTrackTintColor = UIColor(selectedColor)
+        }
+        .onAppear() {
+            UISlider.appearance().setThumbImage(.knob, for: .normal)
+            UISlider.appearance().minimumTrackTintColor = UIColor(selectedColor)
+        }
     }
+    
     
     func onChangeMenuOffset() {
         DispatchQueue.main.async {
