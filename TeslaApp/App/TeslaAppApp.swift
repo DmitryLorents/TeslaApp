@@ -11,8 +11,8 @@ import SwiftUI
 struct TeslaAppApp: App {
     var body: some Scene {
         WindowGroup {
-//            LockVIew()
-            BottomSheet()
+            LockVIew()
+//            BottomSheet()
         }
     }
 }

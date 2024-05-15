@@ -11,6 +11,7 @@ struct SettingsView: View {
     
     @State var isCarClosed = false
     @State var tagSelected = 0
+    @State var isMovedToClimate = false
     
     
     var body: some View {
@@ -25,9 +26,11 @@ struct SettingsView: View {
                     closeCarControlView
                 }
                 Spacer()
+                NavigationLink("", isActive: $isMovedToClimate, destination: {BottomSheet()})
             }
         }
         .navigationBarBackButtonHidden()
+        
     }
     
     
@@ -64,9 +67,15 @@ struct SettingsView: View {
     var controlPanelView: some View {
         HStack(spacing: 30) {
             ForEach(1..<5) { index in
+                
                 Button {
                     withAnimation {
                         tagSelected = index
+                        if index == 2 {
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
+                                isMovedToClimate.toggle()
+                            })
+                        }
                     }
                 } label: {
                     Image("\(index)")
