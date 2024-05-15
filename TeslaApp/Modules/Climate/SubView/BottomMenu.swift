@@ -14,16 +14,22 @@ struct BottomMenu: View {
         static let tapAdvice = "Tap to turn off or swipe up for a fast setup"
         static let on = "On"
         static let vent = "Vent"
+        static let less = "chevron.left"
+        static let more = "chevron.right"
+        static let degree = "\u{00B0}"
     }
     
     @Binding var selectedColor: Color
+    @Binding var temperature: Double
+    var temperatureRange: ClosedRange<Double>
     
     var body: some View {
-        VStack {
+        VStack(spacing: 20) {
             Capsule()
                 .fill(.black)
                 .frame(width: 110, height: 5)
-                .padding()
+                .padding(.top)
+            
             HStack {
                 VStack(alignment: .leading, spacing: 6) {
                     Text(Constants.acON)
@@ -45,23 +51,28 @@ struct BottomMenu: View {
                     onOffButton
                     
                 })
+                .offset(x: 10)
                 
             }
-            .padding(.horizontal, 14)
+            
+            temperatureAdjustView
             
             HStack {
-                ColorPicker("", selection: $selectedColor)
+                Text(Constants.on)
+                Spacer()
+                Text(Constants.vent)
             }
             
+            
             Spacer()
-            
-            
-            
-                
         }
-        .frame(maxWidth: .infinity)
+        .foregroundStyle(.darkElement)
+        .padding(.horizontal, 30)
+        .frame(width: UIScreen.main.bounds.width)
         
     }
+    
+   
     
     private var onOffButton: some View {
         Circle()
@@ -80,6 +91,48 @@ struct BottomMenu: View {
                         
                     )
             )
+
+    }
+    
+    private var stepperView: some View {
+        HStack {
+            
+            Button(action: {
+                if temperature > temperatureRange.lowerBound {
+                    temperature -= 1
+                }
+            }, label: {
+                Image(systemName: Constants.less)
+                    
+            })
+            
+            Text("\(Int(temperature))\(Constants.degree)")
+                .foregroundStyle(.white)
+                .font(.title)
+                .padding(.horizontal)
+            
+            Button(action: {
+                if temperature < temperatureRange.upperBound {
+                    temperature += 1
+                }
+            }, label: {
+                Image(systemName: Constants.more)
+                    
+            })
+            
+        }
+    }
+    
+    private var temperatureAdjustView: some View {
+        HStack {
+            ColorPicker("", selection: $selectedColor)
+            .frame(width: 40, alignment: .leading)
+            Spacer()
+            stepperView
+            Spacer()
+            Image(.vent)
+                .renderingMode(.template)
+        }
     }
     
 }

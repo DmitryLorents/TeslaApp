@@ -18,7 +18,7 @@ struct ClimateView: View {
     }
     
     @Environment (\.dismiss) var dismiss
-    @State var temparature = 15.0
+    @Binding var temparature: Double
     @Binding var temparatureColor: Color
     @State var fanSpeed = 0.0
     @State var heatValue = 0.0
@@ -37,10 +37,7 @@ struct ClimateView: View {
             Spacer()
         }
         .navigationBarBackButtonHidden()
-//        .onAppear() {
-//            UISlider.appearance().setThumbImage(.knob, for: .normal)
-//            UISlider.appearance().minimumTrackTintColor = UIColor(temparatureColor)
-//        }
+
     }
     
     var navBarView: some View {
@@ -87,6 +84,7 @@ struct ClimateView: View {
                     .trim(from: 0.0, to: CGFloat(temparature - 15) / 15)
                     .stroke(temparatureColor, style: StrokeStyle(lineWidth: 20, lineCap: .round))
                     .rotationEffect(.degrees(-90))
+                    
             )
             .overlay(
                 Circle()
@@ -103,22 +101,25 @@ struct ClimateView: View {
     
     var buttonsView: some View {
                 DisclosureGroup("") {
-        VStack{
-            
-            SliderView(range: 15.0...30.0, value: $temparature, text: Constants.ac, image: .ac)
-            SliderView(range: 0.0...1.0, value: $fanSpeed, text: Constants.fun, image: .fan)
-            SliderView(range: 0.0...1.0, value: $heatValue, text: Constants.heat, image: .heat)
-            SliderView(range: 0.0...1.0, value: $autoValue, text: Constants.auto, image: .auto)
-            
-        }
+                    ScrollView {
+                        VStack{
+                            
+                            SliderView(range: 15.0...30.0, value: $temparature, text: Constants.ac, image: .ac)
+                            SliderView(range: 0.0...1.0, value: $fanSpeed, text: Constants.fun, image: .fan)
+                            SliderView(range: 0.0...1.0, value: $heatValue, text: Constants.heat, image: .heat)
+                            SliderView(range: 0.0...1.0, value: $autoValue, text: Constants.auto, image: .auto)
+                        }
+                    }
                 }
                 .padding(.horizontal)
-        .accentColor(.blue)
+                .font(.title)
+                .bold()
+                .foregroundStyle(.white)
+//        .accentColor(.blue)
     }
     
 }
 
-//#Preview {
-////    ClimateView(temparatureColor: Color.red)
-//    
-//}
+#Preview {
+    BottomSheet()
+}

@@ -13,6 +13,8 @@ struct BottomSheet: View {
     @State private var currentMenuOffsetY: CGFloat = 0.0
     @State private var lastMenuOffsetY: CGFloat = 0.0
     @State var selectedColor = Color.red
+    @State var temperature = 15.0
+    private var temperatureRange = 15.0...30.0
     
     var gesture: some Gesture {
         DragGesture()
@@ -37,17 +39,12 @@ struct BottomSheet: View {
     var body: some View {
         ZStack {
             
-            ClimateView(temparatureColor: $selectedColor)
+            ClimateView(temparature: $temperature, temparatureColor: $selectedColor)
                 .offset(y: 300)
             
-//            Text("Some text")
-//                .foregroundStyle(selectedColor)
-//                .onTapGesture {
-//                    selectedColor = .orange
-//                }
+            BottomMenu(selectedColor: $selectedColor, temperature: $temperature, temperatureRange: temperatureRange)
             
-            BottomMenu(selectedColor: $selectedColor)
-                .frame(height: UIScreen.main.bounds.height + 500)
+                .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height + 500)
                 .background(RoundedRectangle(cornerRadius: 40)
                     .fill(LinearGradient(colors: [.bottomSheetTopGradient, .bottomSheetBottomGradient], startPoint: .top, endPoint: .bottom))
                 )
