@@ -20,6 +20,8 @@ struct ClimateView: View {
     @Environment (\.dismiss) var dismiss
     @Binding var temparature: Double
     @Binding var temparatureColor: Color
+    @Binding var isAcOn: Bool
+    @State var isOn = false
     @State var fanSpeed = 0.0
     @State var heatValue = 0.0
     @State var autoValue = 0.0
@@ -87,6 +89,7 @@ struct ClimateView: View {
                     .trim(from: 0.0, to: CGFloat(temparature - 15) / 15)
                     .stroke(temparatureColor, style: StrokeStyle(lineWidth: 20, lineCap: .round))
                     .rotationEffect(.degrees(-90))
+                    .opacity(isAcOn ? 1: 0)
                 
             )
             .overlay(
@@ -98,6 +101,7 @@ struct ClimateView: View {
                 Text(String(Int(temparature)))
                     .font(.system(size: 54))
                     .foregroundStyle(.darkElement)
+                    .opacity(isAcOn ? 1: 0)
             )
     }
     
@@ -106,10 +110,10 @@ struct ClimateView: View {
         DisclosureGroup("") {
             
             VStack{
-                SliderView(range: 15.0...30.0, value: $temparature, text: Constants.ac, image: .ac)
-                SliderView(range: 0.0...1.0, value: $fanSpeed, text: Constants.fun, image: .fan)
-                SliderView(range: 0.0...1.0, value: $heatValue, text: Constants.heat, image: .heat)
-                SliderView(range: 0.0...1.0, value: $autoValue, text: Constants.auto, image: .auto)
+                SliderView(value: $temparature, isOn: $isAcOn , range: 15.0...30.0, text: Constants.ac, image: .ac)
+                SliderView(value: $fanSpeed, isOn: $isOn, range: 0.0...1.0, text: Constants.fun, image: .fan)
+                SliderView(value: $heatValue,isOn: $isOn, range: 0.0...1.0, text: Constants.heat, image: .heat)
+                SliderView(value: $autoValue, isOn: $isOn, range: 0.0...1.0, text: Constants.auto, image: .auto)
                 Rectangle()
                     .fill(.clear)
                     .frame(height: 200)

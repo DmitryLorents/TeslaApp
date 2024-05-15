@@ -14,7 +14,7 @@ struct BottomSheet: View {
     @State private var lastMenuOffsetY: CGFloat = 0.0
     @State var selectedColor = Color.red
     @State var temperature = 15.0
-    @State var isOpen = false
+    @State var isAcOn = false
     private var temperatureRange = 15.0...30.0
     
     var gesture: some Gesture {
@@ -31,6 +31,7 @@ struct BottomSheet: View {
                         currentMenuOffsetY = -maxHeight
                     } else {
                         currentMenuOffsetY = 0
+                        
                     }
                     lastMenuOffsetY = currentMenuOffsetY
                 }
@@ -40,25 +41,18 @@ struct BottomSheet: View {
     var body: some View {
         ZStack {
             
-            ClimateView(temparature: $temperature, temparatureColor: $selectedColor)
-//                .offset(y: 300)
+            ClimateView(temparature: $temperature, temparatureColor: $selectedColor, isAcOn: $isAcOn)
             
-            BottomMenu(selectedColor: $selectedColor, temperature: $temperature, temperatureRange: temperatureRange)
-//
+            BottomMenu(isAcOn: $isAcOn, selectedColor: $selectedColor, temperature: $temperature, temperatureRange: temperatureRange)
                             .frame(height: UIScreen.main.bounds.height - 500)
                 .background(RoundedRectangle(cornerRadius: 40)
                     .fill(LinearGradient(colors: [.bottomSheetTopGradient, .bottomSheetBottomGradient], startPoint: .top, endPoint: .bottom))
                 )
-//                .frame(height: 200)
-//                .ignoresSafeArea(.all)
+
                 .offset(y: UIScreen.main.bounds.height - 405)
                 .offset(y: currentMenuOffsetY)
                 .gesture(gesture)
-                .onTapGesture {
-                    currentMenuOffsetY = -100
-                }
-
-            
+                
         }
         .onChange(of: selectedColor) {
             print("On change")
@@ -68,7 +62,7 @@ struct BottomSheet: View {
         }
         .onAppear() {
             UISlider.appearance().setThumbImage(.knob, for: .normal)
-            UISlider.appearance().minimumTrackTintColor = UIColor(selectedColor)
+            UISlider.appearance().minimumTrackTintColor = UIColor(isAcOn ? selectedColor : .gray)
         }
     }
     

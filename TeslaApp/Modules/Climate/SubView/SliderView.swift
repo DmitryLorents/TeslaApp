@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct SliderView:  View {
-    var range: ClosedRange<Double>
     @Binding var value: Double
+    @Binding var isOn: Bool
+    var range: ClosedRange<Double>
     var text: String
     var image: ImageResource
     
@@ -21,10 +22,12 @@ struct SliderView:  View {
             Spacer()
                 .frame(width: 20)
             Image(image)
+                .renderingMode(.template)
                 .resizable()
                 .frame(width: 50, height: 50)
                 .padding(.zero)
                 .neumorphismSelectedCircleStyle()
+                .foregroundStyle(isOn ? .blue : .darkElement)
             
             Spacer()
                 .frame(width: 30)

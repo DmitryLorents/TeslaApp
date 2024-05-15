@@ -11,6 +11,7 @@ struct BottomMenu: View {
     
     private enum Constants {
         static let acON = "A/C is ON"
+        static let acOff = "A/C is OFF"
         static let tapAdvice = "Tap to turn off or swipe up for a fast setup"
         static let on = "On"
         static let vent = "Vent"
@@ -19,6 +20,7 @@ struct BottomMenu: View {
         static let degree = "\u{00B0}"
     }
     
+    @Binding var isAcOn: Bool
     @Binding var selectedColor: Color
     @Binding var temperature: Double
     var temperatureRange: ClosedRange<Double>
@@ -32,7 +34,7 @@ struct BottomMenu: View {
             
             HStack {
                 VStack(alignment: .leading, spacing: 6) {
-                    Text(Constants.acON)
+                    Text(isAcOn ? Constants.acON : Constants.acOff)
                         .foregroundStyle(.white)
                         .font(.system(size: 20, weight: .semibold))
                     Text(Constants.tapAdvice)
@@ -45,7 +47,9 @@ struct BottomMenu: View {
                     .frame(width: 60)
                 
                 Button(action: {
-                    
+                    withAnimation {
+                        isAcOn.toggle()
+                    }
                 }, label: {
                     onOffButton
                 })
