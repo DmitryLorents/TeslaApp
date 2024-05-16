@@ -13,7 +13,8 @@ struct TeslaAppApp: App {
         WindowGroup {
             NavigationView {
 //                SplashScreenView()
-                ChargeView()
+//                ChargeView()
+                MainTabView()
             }
         }
     }

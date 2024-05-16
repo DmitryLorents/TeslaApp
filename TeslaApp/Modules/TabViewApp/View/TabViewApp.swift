@@ -9,6 +9,8 @@ import SwiftUI
 
 struct TabViewApp<Content: View> : View {
     
+    let effectID = "tabBarItem"
+    
     @Binding var selection: Int
     @Namespace private var tabBarItem
     @State private var tabs: [TabItem] = []
@@ -40,6 +42,30 @@ struct TabViewApp<Content: View> : View {
     }
     
     private var tabsView: some View {
-        Text("")
+        ForEach(Array(tabs.enumerated()), id: \.offset) { index, element in
+            
+            Spacer()
+            Group {
+                Image(element.icon, bundle: nil)
+                    .renderingMode(.template)
+                    .foregroundStyle(selection == index ? .white : .gray)
+            }
+            .overlay(
+            Circle()
+                .fill(LinearGradient(colors: [.gradientTop, .gradientBottom], startPoint: .top, endPoint: .bottom))
+                .frame(width: 44, height: 44)
+                .blur(radius: 3.0)
+                .opacity(0.3)
+                .matchedGeometryEffect(id: effectID, in: tabBarItem)
+                
+            )
+            .onTapGesture {
+                withAnimation {
+                    selection = index
+                }
+            }
+            
+            Spacer()
+        }
     }
 }
