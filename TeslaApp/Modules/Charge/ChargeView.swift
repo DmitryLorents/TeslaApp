@@ -40,9 +40,14 @@ struct ChargeView: View {
                     .resizable()
                     .frame(maxWidth: .infinity)
                     .aspectRatio(contentMode: .fit)
-                
-                chargeView
-                
+
+                Group {
+                    chargeView
+                    Spacer()
+                        .frame(height: 41)
+                    chargersView
+                }
+                .offset(y: -80)
                 Spacer()
             }
         }
@@ -88,7 +93,7 @@ struct ChargeView: View {
     
     var chargeView: some View {
         
-        VStack(spacing: 0) {
+        VStack(spacing: 5) {
             
             Image(.battery)
                 .resizable()
@@ -132,6 +137,32 @@ struct ChargeView: View {
             }
                 .padding(.top, 30)
             , alignment: .top)
+    }
+    
+    var chargersView: some View {
+        RoundedRectangle(cornerRadius: 40)
+            .fill(Color.rectangleBackground)
+            .frame(height: 130)
+            .neumorphismSelectedStyle()
+            .overlay(
+                HStack {
+                    Text(Constants.nearbyChargers)
+                    Spacer()
+                    Button(action: {
+                        
+                    }, label: {
+                        Image(systemName: Constants.up)
+                            .font(.title)
+                            .foregroundStyle(.darkElement)
+                            .padding()
+                            .neumorphismSelectedCircleStyle()
+                            .offset(x: 10.0)
+                    })
+                }
+                    .font(.system(size: 18, weight: .semibold))
+                    .padding(.horizontal, 25)
+            )
+            .padding(.horizontal, 30)
     }
 }
 
