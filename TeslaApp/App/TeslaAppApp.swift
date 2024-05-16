@@ -12,8 +12,8 @@ struct TeslaAppApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationView {
-//                LockVIew()
-                SplashScreenView()
+//                SplashScreenView()
+                ChargeView()
             }
         }
     }
