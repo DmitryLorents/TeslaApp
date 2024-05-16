@@ -38,4 +38,8 @@ extension View {
         LinearGradient(colors: [.gradientTop, .gradientBottom], startPoint: .bottom, endPoint: .top)
     }
     
+    func tabItemApp(_ label: () -> TabItem) -> some View {
+        modifier(TabItemModifier(tabBarItem: label()))
+    }
+    
 }
