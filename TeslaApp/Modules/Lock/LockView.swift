@@ -25,7 +25,6 @@ struct LockVIew: View {
     }
     
     var body: some View {
-//        NavigationView {
         backgroundStackView(gradient: gradient) {
             
                 VStack {
@@ -64,7 +63,8 @@ struct LockVIew: View {
                     
                 }
             }
-//        }
+        .navigationBarBackButtonHidden()
+
     }
     
     private var lockView: some View {

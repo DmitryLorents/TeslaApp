@@ -23,6 +23,7 @@
 		0AC2AF012BF38AA700C0C144 /* ClimateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC2AF002BF38AA700C0C144 /* ClimateView.swift */; };
 		0AEDA3952BF5CC3200A38A41 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEDA3942BF5CC3200A38A41 /* SplashScreenView.swift */; };
 		0AEDA3982BF5CCD100A38A41 /* LogoShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEDA3972BF5CCD100A38A41 /* LogoShape.swift */; };
+		0AEDA39B2BF62BEC00A38A41 /* ChargeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEDA39A2BF62BEC00A38A41 /* ChargeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		0AC2AF002BF38AA700C0C144 /* ClimateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClimateView.swift; sourceTree = "<group>"; };
 		0AEDA3942BF5CC3200A38A41 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		0AEDA3972BF5CCD100A38A41 /* LogoShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoShape.swift; sourceTree = "<group>"; };
+		0AEDA39A2BF62BEC00A38A41 /* ChargeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +135,7 @@
 		0AC2AEDA2BF27DE000C0C144 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				0AEDA3992BF62BDA00A38A41 /* Charge */,
 				0AEDA3932BF5CC1800A38A41 /* SplashScreen */,
 				0AC2AEFF2BF38A9700C0C144 /* Climate */,
 				0AC2AEE12BF29CC300C0C144 /* Lock */,
@@ -181,6 +184,14 @@
 				0AEDA3972BF5CCD100A38A41 /* LogoShape.swift */,
 			);
 			path = SubVew;
+			sourceTree = "<group>";
+		};
+		0AEDA3992BF62BDA00A38A41 /* Charge */ = {
+			isa = PBXGroup;
+			children = (
+				0AEDA39A2BF62BEC00A38A41 /* ChargeView.swift */,
+			);
+			path = Charge;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,6 +274,7 @@
 				0AC2AEC62BF27A0200C0C144 /* TeslaAppApp.swift in Sources */,
 				0AC2AEE32BF29CDD00C0C144 /* LockView.swift in Sources */,
 				0AC2AED52BF27D7E00C0C144 /* View + Extension.swift in Sources */,
+				0AEDA39B2BF62BEC00A38A41 /* ChargeView.swift in Sources */,
 				0AC2AEDE2BF27E3C00C0C144 /* NeumorphismUnselectedCircle.swift in Sources */,
 				0A2633322BF3F485005B3096 /* BottomMenu.swift in Sources */,
 				0AC2AF012BF38AA700C0C144 /* ClimateView.swift in Sources */,
