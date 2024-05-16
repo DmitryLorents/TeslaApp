@@ -15,7 +15,7 @@ struct SettingsView: View {
     
     
     var body: some View {
-        backgroundStackView(gradient: LinearGradient(colors: [.background], startPoint: .top, endPoint: .bottom)) {
+        backgroundStackView(gradient: LinearGradient(colors: [.backgroundApp], startPoint: .top, endPoint: .bottom)) {
             VStack {
                 headerView
                 carView
@@ -52,7 +52,7 @@ struct SettingsView: View {
             }
             .padding(20)
             .background(RoundedRectangle(cornerRadius: 50)
-                .fill(Color.background))
+                .fill(Color.backgroundApp))
             .neumorphismSelectedStyle()
         }
         .frame(width: 300)
@@ -92,7 +92,7 @@ struct SettingsView: View {
             }
         }
         .padding()
-        .background(RoundedRectangle(cornerRadius: 50).fill(Color.background))
+        .background(RoundedRectangle(cornerRadius: 50).fill(Color.backgroundApp))
         .neumorphismUnselectedStyle()
     }
     

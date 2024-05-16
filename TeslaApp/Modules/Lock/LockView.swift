@@ -21,11 +21,11 @@ struct LockVIew: View {
     @State private var isLocked = true
     
     private var gradient: LinearGradient {
-        LinearGradient(colors: [.background, isLocked ? .black : .background, .background], startPoint: .top, endPoint: .bottom)
+        LinearGradient(colors: [.backgroundApp, isLocked ? .black : .backgroundApp, .backgroundApp], startPoint: .top, endPoint: .bottom)
     }
     
     var body: some View {
-        NavigationView {
+//        NavigationView {
         backgroundStackView(gradient: gradient) {
             
                 VStack {
@@ -64,7 +64,7 @@ struct LockVIew: View {
                     
                 }
             }
-        }
+//        }
     }
     
     private var lockView: some View {
@@ -87,7 +87,7 @@ struct LockVIew: View {
         .padding(.horizontal, 30)
         .padding(.vertical, 15)
             .background(Capsule()
-                .fill(Color.background)
+                .fill(Color.bottomSheetTopGradient)
                 .frame(width: 200))
             .neumorphismSelectedStyle()
     }
