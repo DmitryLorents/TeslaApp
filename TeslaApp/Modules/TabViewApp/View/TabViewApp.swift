@@ -28,7 +28,7 @@ struct TabViewApp<Content: View> : View {
             HStack {
                 tabsView
             }
-            .frame(minWidth: .infinity)
+            .frame(maxWidth: .infinity)
             .frame(height: 78)
             .background(
                 Color.black
@@ -51,13 +51,16 @@ struct TabViewApp<Content: View> : View {
                     .foregroundStyle(selection == index ? .white : .gray)
             }
             .overlay(
-            Circle()
-                .fill(LinearGradient(colors: [.gradientTop, .gradientBottom], startPoint: .top, endPoint: .bottom))
-                .frame(width: 44, height: 44)
-                .blur(radius: 3.0)
-                .opacity(0.3)
-                .matchedGeometryEffect(id: effectID, in: tabBarItem)
-                
+                ZStack{
+                    if selection == index {
+                        Circle()
+                            .fill(LinearGradient(colors: [.gradientTop, .gradientBottom], startPoint: .top, endPoint: .bottom))
+                            .frame(width: 60, height: 60)
+                            .blur(radius: 15.0)
+                            .opacity(0.4)
+                            .matchedGeometryEffect(id: effectID, in: tabBarItem)
+                    }
+                }
             )
             .onTapGesture {
                 withAnimation {
@@ -68,4 +71,8 @@ struct TabViewApp<Content: View> : View {
             Spacer()
         }
     }
+}
+
+#Preview {
+    MainTabView()
 }

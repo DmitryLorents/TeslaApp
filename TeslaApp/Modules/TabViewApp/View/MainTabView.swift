@@ -27,17 +27,24 @@ struct MainTabView: View {
                 }
                 .opacity(selection == 0 ? 1 : 0)
             
-            Color.red
+            Color.blue
                 .ignoresSafeArea()
                 .tabItemApp {
-                    TabItem(icon: Constants.carIcon)
+                    TabItem(icon: Constants.chargeIcon)
                 }
                 .opacity(selection == 1 ? 1 : 0)
             
-            Color.red
+            Color.green
                 .ignoresSafeArea()
                 .tabItemApp {
-                    TabItem(icon: Constants.carIcon)
+                    TabItem(icon: Constants.locationIcon)
+                }
+                .opacity(selection == 2 ? 1 : 0)
+            
+            Color.green
+                .ignoresSafeArea()
+                .tabItemApp {
+                    TabItem(icon: Constants.personIcon)
                 }
                 .opacity(selection == 2 ? 1 : 0)
             
