@@ -9,7 +9,8 @@
 /* Begin PBXBuildFile section */
 		0A158E892BF73BCE0048B710 /* TabBarShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A158E882BF73BCE0048B710 /* TabBarShape.swift */; };
 		0A158E8D2BF773060048B710 /* UnderDevelopmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A158E8C2BF773060048B710 /* UnderDevelopmentView.swift */; };
-		0A26332D2BF3E6EB005B3096 /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A26332C2BF3E6EB005B3096 /* SliderView.swift */; };
+		0A158E902BF781BB0048B710 /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A158E8F2BF781BB0048B710 /* SliderView.swift */; };
+		0A26332D2BF3E6EB005B3096 /* ClimateItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A26332C2BF3E6EB005B3096 /* ClimateItemView.swift */; };
 		0A2633302BF3E93C005B3096 /* BottomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A26332F2BF3E93C005B3096 /* BottomSheet.swift */; };
 		0A2633322BF3F485005B3096 /* BottomMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2633312BF3F485005B3096 /* BottomMenu.swift */; };
 		0AC2AEC62BF27A0200C0C144 /* TeslaAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC2AEC52BF27A0200C0C144 /* TeslaAppApp.swift */; };
@@ -36,7 +37,8 @@
 /* Begin PBXFileReference section */
 		0A158E882BF73BCE0048B710 /* TabBarShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarShape.swift; sourceTree = "<group>"; };
 		0A158E8C2BF773060048B710 /* UnderDevelopmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderDevelopmentView.swift; sourceTree = "<group>"; };
-		0A26332C2BF3E6EB005B3096 /* SliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
+		0A158E8F2BF781BB0048B710 /* SliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
+		0A26332C2BF3E6EB005B3096 /* ClimateItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClimateItemView.swift; sourceTree = "<group>"; };
 		0A26332F2BF3E93C005B3096 /* BottomSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheet.swift; sourceTree = "<group>"; };
 		0A2633312BF3F485005B3096 /* BottomMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomMenu.swift; sourceTree = "<group>"; };
 		0AC2AEC22BF27A0200C0C144 /* TeslaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeslaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,10 +91,18 @@
 			path = UnderDevelopment;
 			sourceTree = "<group>";
 		};
+		0A158E8E2BF781940048B710 /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				0A158E8F2BF781BB0048B710 /* SliderView.swift */,
+			);
+			path = SubViews;
+			sourceTree = "<group>";
+		};
 		0A26332E2BF3E92C005B3096 /* SubView */ = {
 			isa = PBXGroup;
 			children = (
-				0A26332C2BF3E6EB005B3096 /* SliderView.swift */,
+				0A26332C2BF3E6EB005B3096 /* ClimateItemView.swift */,
 				0A26332F2BF3E93C005B3096 /* BottomSheet.swift */,
 				0A2633312BF3F485005B3096 /* BottomMenu.swift */,
 			);
@@ -190,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				0AC2AEC72BF27A0200C0C144 /* SettingsView.swift */,
+				0A158E8E2BF781940048B710 /* SubViews */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -333,6 +344,7 @@
 				0A158E8D2BF773060048B710 /* UnderDevelopmentView.swift in Sources */,
 				0AC2AED82BF27DBD00C0C144 /* NeumorphismUnselected.swift in Sources */,
 				0AC2AEDC2BF27E1D00C0C144 /* NeumorphismSelected.swift in Sources */,
+				0A158E902BF781BB0048B710 /* SliderView.swift in Sources */,
 				0AEDA3982BF5CCD100A38A41 /* LogoShape.swift in Sources */,
 				0A158E892BF73BCE0048B710 /* TabBarShape.swift in Sources */,
 				0AC2AEC62BF27A0200C0C144 /* TeslaAppApp.swift in Sources */,
@@ -345,7 +357,7 @@
 				0A2633322BF3F485005B3096 /* BottomMenu.swift in Sources */,
 				0AC2AF012BF38AA700C0C144 /* ClimateView.swift in Sources */,
 				0AD371DA2BF696A400628EC5 /* TabViewApp.swift in Sources */,
-				0A26332D2BF3E6EB005B3096 /* SliderView.swift in Sources */,
+				0A26332D2BF3E6EB005B3096 /* ClimateItemView.swift in Sources */,
 				0AD371E62BF6A50B00628EC5 /* MainTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

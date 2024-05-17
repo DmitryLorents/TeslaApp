@@ -7,12 +7,13 @@
 
 import SwiftUI
 
-struct SliderView:  View {
+struct ClimateItemView:  View {
     @Binding var value: Double
     @Binding var isOn: Bool
     var range: ClosedRange<Double>
     var text: String
     var image: ImageResource
+    var minTrackColor: Color
     
     var body: some View {
         
@@ -31,8 +32,8 @@ struct SliderView:  View {
             
             Spacer()
                 .frame(width: 30)
-            
-            Slider(value: $value, in: range)
+            SliderView(value: $value, range: range, thumbImage: .knob, minTrackColor: minTrackColor)
+//            Slider(value: $value, in: range)
         }
         .tint(.orange)
         .padding(.top, 20)
@@ -40,4 +41,8 @@ struct SliderView:  View {
             .weight(.semibold))
         .foregroundStyle(.darkElement)
     }
+}
+
+#Preview {
+    BottomSheet()
 }

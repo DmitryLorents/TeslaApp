@@ -54,16 +54,6 @@ struct BottomSheet: View {
                 .gesture(gesture)
                 
         }
-        .onChange(of: selectedColor) {
-            print("On change")
-            print(selectedColor)
-            UISlider.appearance().setThumbImage(.knob, for: .normal)
-                        UISlider.appearance().minimumTrackTintColor = UIColor(selectedColor)
-        }
-        .onAppear() {
-            UISlider.appearance().setThumbImage(.knob, for: .normal)
-            UISlider.appearance().minimumTrackTintColor = UIColor(isAcOn ? selectedColor : .gray)
-        }
     }
     
     

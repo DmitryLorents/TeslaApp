@@ -18,13 +18,13 @@ struct UnderDevelopmentView: View {
             Color.backgroundApp
                 .ignoresSafeArea()
             
-            VStack {
+            VStack(spacing: 50) {
                 Image(systemName: Constants.gearImage)
                     .resizable()
                     .renderingMode(.template)
                     .aspectRatio(contentMode: .fit)
                     .foregroundStyle(.darkElement)
-                    .frame(width: 300)
+                    .padding(.horizontal, 100)
                 Text(Constants.text)
                     .font(.title)
                     .bold()

@@ -11,7 +11,7 @@ struct ChargeView: View {
     
     private enum Constants {
         static let backButton = "chevron.backward"
-        static let climate = "CHARGING"
+        static let charging = "CHARGING"
         static let percentSign = "%"
         static let setLimit = "Set Charge Limit"
         static let nearbyChargers = "Nearby SuperChargers"
@@ -59,18 +59,10 @@ struct ChargeView: View {
     
     var navBarView: some View {
         HStack {
-            
-            Button {
-                dismiss()
-            } label: {
-                Image(systemName: Constants.backButton)
-                    .foregroundStyle(.darkElement)
-                    .padding()
-                    .neumorphismSelectedCircleStyle()
-                
+            Spacer()
                 Spacer()
-                
-                Text(Constants.climate)
+            Spacer()
+                Text(Constants.charging)
                     .foregroundStyle(.white)
                     .font(.system(size: 20, weight: .semibold))
                 
@@ -85,7 +77,7 @@ struct ChargeView: View {
                         .neumorphismSelectedCircleStyle()
                 })
                 
-            }
+            
             
         }
         .padding(.horizontal, 30)

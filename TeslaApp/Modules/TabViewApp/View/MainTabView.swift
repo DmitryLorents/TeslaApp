@@ -20,7 +20,7 @@ struct MainTabView: View {
     
     var body: some View {
         TabViewApp(selection: $selection) {
-            LockVIew()
+            SettingsView()
                 .tabItemApp {
                     TabItem(icon: Constants.carIcon)
                 }

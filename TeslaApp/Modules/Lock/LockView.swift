@@ -31,7 +31,7 @@ struct LockVIew: View {
                     
                     HStack {
                         Spacer()
-                        NavigationLink(destination: SettingsView()) {
+                        NavigationLink(destination: MainTabView()) {
                             Image(.settings)
                                 .resizable()
                                 .frame(width: 22, height: 22)

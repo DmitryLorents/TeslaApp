@@ -18,6 +18,7 @@ struct ClimateView: View {
         static let support = "Tesla Support"
         static let urlString = "https://www.tesla.com/support "
         static let ok = "OK"
+        static let visitSupport = "Please visit our site:"
     }
     
     @Environment (\.dismiss) var dismiss
@@ -62,10 +63,15 @@ struct ClimateView: View {
     var alertView: some View {
         VStack{
             Link(destination: URL(string: Constants.urlString)!, label: {
-                Text(Constants.support)
-                    .font(.title)
-                    .bold()
-                    .padding(20)
+                VStack(spacing: 10) {
+                    Text(Constants.visitSupport)
+                        .foregroundStyle(.darkElement)
+                    Text(Constants.support)
+                        .font(.system(size: 20))
+                        .bold()
+                        .underline()
+                }
+                    .padding(12)
                     .transition(.opacity.combined(with: .scale))
             })
             
@@ -158,14 +164,15 @@ struct ClimateView: View {
         DisclosureGroup("") {
             
             VStack{
-                SliderView(value: $temparature, isOn: $isAcOn , range: 15.0...30.0, text: Constants.ac, image: .ac)
-                SliderView(value: $fanSpeed, isOn: $isOn, range: 0.0...1.0, text: Constants.fun, image: .fan)
-                SliderView(value: $heatValue,isOn: $isOn, range: 0.0...1.0, text: Constants.heat, image: .heat)
-                SliderView(value: $autoValue, isOn: $isOn, range: 0.0...1.0, text: Constants.auto, image: .auto)
+                ClimateItemView(value: $temparature, isOn: $isAcOn , range: 15.0...30.0, text: Constants.ac, image: .ac, minTrackColor: temparatureColor)
+                ClimateItemView(value: $fanSpeed, isOn: $isOn, range: 0.0...1.0, text: Constants.fun, image: .fan, minTrackColor: temparatureColor)
+                ClimateItemView(value: $heatValue,isOn: $isOn, range: 0.0...1.0, text: Constants.heat, image: .heat, minTrackColor: temparatureColor)
+                ClimateItemView(value: $autoValue, isOn: $isOn, range: 0.0...1.0, text: Constants.auto, image: .auto, minTrackColor: temparatureColor)
                 Rectangle()
                     .fill(.clear)
                     .frame(height: 200)
             }
+            .padding(.horizontal, 20)
             
             
         }
