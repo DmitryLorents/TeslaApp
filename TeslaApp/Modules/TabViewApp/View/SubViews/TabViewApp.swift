@@ -41,7 +41,7 @@ struct TabViewApp<Content: View> : View {
             )
             
         })
-        .ignoresSafeArea()
+        .ignoresSafeArea(.all, edges: .bottom)
         .onPreferenceChange(TabItemPreferenceKey.self, perform: { value in
             tabs = value
         })

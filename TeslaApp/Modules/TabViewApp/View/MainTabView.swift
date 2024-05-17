@@ -21,28 +21,24 @@ struct MainTabView: View {
     var body: some View {
         TabViewApp(selection: $selection) {
             LockVIew()
-//                .ignoresSafeArea(.all, edges: .bottom)
                 .tabItemApp {
                     TabItem(icon: Constants.carIcon)
                 }
                 .opacity(selection == 0 ? 1 : 0)
             
             ChargeView()
-//                .ignoresSafeArea()
                 .tabItemApp {
                     TabItem(icon: Constants.chargeIcon)
                 }
                 .opacity(selection == 1 ? 1 : 0)
             
             UnderDevelopmentView()
-//                .ignoresSafeArea()
                 .tabItemApp {
                     TabItem(icon: Constants.locationIcon)
                 }
                 .opacity(selection == 2 ? 1 : 0)
             
             UnderDevelopmentView()
-//                .ignoresSafeArea()
                 .tabItemApp {
                     TabItem(icon: Constants.personIcon)
                 }
