@@ -10,6 +10,7 @@ import SwiftUI
 struct TabViewApp<Content: View> : View {
     
     let effectID = "tabBarItem"
+    var tabBarHeight = 80.0
     
     @Binding var selection: Int
     @Namespace private var tabBarItem
@@ -31,11 +32,16 @@ struct TabViewApp<Content: View> : View {
             .frame(maxWidth: .infinity)
             .frame(height: 78)
             .background(
-                Color.black
-                    .ignoresSafeArea(.all, edges: .bottom)
+                TabBarShape()
+                    .fill(Color.black)
+                    .shadow(color: .darkElement, radius: 1)
+                    .frame(width: UIScreen.main.bounds.width, height: tabBarHeight)
+
+                
             )
             
         })
+        .ignoresSafeArea()
         .onPreferenceChange(TabItemPreferenceKey.self, perform: { value in
             tabs = value
         })

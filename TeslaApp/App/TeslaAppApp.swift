@@ -12,9 +12,9 @@ struct TeslaAppApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationView {
-//                SplashScreenView()
+                SplashScreenView()
 //                ChargeView()
-                MainTabView()
+//                MainTabView()
             }
         }
     }

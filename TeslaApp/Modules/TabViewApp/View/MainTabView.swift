@@ -20,33 +20,33 @@ struct MainTabView: View {
     
     var body: some View {
         TabViewApp(selection: $selection) {
-            Color.red
-                .ignoresSafeArea()
+            LockVIew()
+//                .ignoresSafeArea(.all, edges: .bottom)
                 .tabItemApp {
                     TabItem(icon: Constants.carIcon)
                 }
                 .opacity(selection == 0 ? 1 : 0)
             
-            Color.blue
-                .ignoresSafeArea()
+            ChargeView()
+//                .ignoresSafeArea()
                 .tabItemApp {
                     TabItem(icon: Constants.chargeIcon)
                 }
                 .opacity(selection == 1 ? 1 : 0)
             
-            Color.green
-                .ignoresSafeArea()
+            UnderDevelopmentView()
+//                .ignoresSafeArea()
                 .tabItemApp {
                     TabItem(icon: Constants.locationIcon)
                 }
                 .opacity(selection == 2 ? 1 : 0)
             
-            Color.green
-                .ignoresSafeArea()
+            UnderDevelopmentView()
+//                .ignoresSafeArea()
                 .tabItemApp {
                     TabItem(icon: Constants.personIcon)
                 }
-                .opacity(selection == 2 ? 1 : 0)
+                .opacity(selection == 3 ? 1 : 0)
             
             
         }

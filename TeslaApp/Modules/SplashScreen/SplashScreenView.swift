@@ -19,7 +19,7 @@ struct SplashScreenView: View {
     var body: some View {
         
         ZStack {
-            NavigationLink("", destination: LockVIew(), isActive: $isMovedToLockScreen)
+            NavigationLink("", destination: MainTabView(), isActive: $isMovedToLockScreen)
             if isShown {
                 logoView
                     .transition(.push(from: .bottom).combined(with: .opacity))
