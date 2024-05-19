@@ -178,7 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				0A158E8B2BF772EF0048B710 /* UnderDevelopment */,
-				0AD371D82BF6965F00628EC5 /* TabViewApp */,
+				0AD371D82BF6965F00628EC5 /* TabView */,
 				0AEDA3992BF62BDA00A38A41 /* Charge */,
 				0AEDA3932BF5CC1800A38A41 /* SplashScreen */,
 				0AC2AEFF2BF38A9700C0C144 /* Climate */,
@@ -214,13 +214,13 @@
 			path = Climate;
 			sourceTree = "<group>";
 		};
-		0AD371D82BF6965F00628EC5 /* TabViewApp */ = {
+		0AD371D82BF6965F00628EC5 /* TabView */ = {
 			isa = PBXGroup;
 			children = (
 				0AD371DB2BF6970C00628EC5 /* Model */,
 				0AD371E02BF697E900628EC5 /* View */,
 			);
-			path = TabViewApp;
+			path = TabView;
 			sourceTree = "<group>";
 		};
 		0AD371DB2BF6970C00628EC5 /* Model */ = {

@@ -70,6 +70,8 @@ struct LockVIew: View {
     private var lockView: some View {
         HStack(spacing: 20) {
             Text(isLocked ? Constants.unlock : Constants.lock)
+                .foregroundStyle(.white)
+                .frame(width: 80)
                 .font(.system(size: 17, weight: .semibold))
             Button(action: {
                 withAnimation {
@@ -87,9 +89,10 @@ struct LockVIew: View {
         .padding(.horizontal, 30)
         .padding(.vertical, 15)
             .background(Capsule()
-                .fill(Color.bottomSheetTopGradient)
+                .neumorphismSelectedStyle()
+                        
+//                .fill(Color.bottomSheetTopGradient)
                 .frame(width: 200))
-            .neumorphismSelectedStyle()
     }
     
     private var welcomeTextView: some View {

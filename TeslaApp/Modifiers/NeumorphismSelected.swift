@@ -10,7 +10,11 @@ import SwiftUI
 struct NeumorphismSelected: ViewModifier {
     func body(content: Content) -> some View {
         content
-            .shadow(color: .lightShadow, radius: 5, x: 5, y: 5)
-            .shadow(color: .darkShadow, radius: 5, x: -5, y: -5)
+            .foregroundStyle(.elementBackgrpound
+                .shadow(.inner(color: .white.opacity(0.15), radius: 4, x: -4, y: -4))
+                .shadow(.inner(color: .black.opacity(0.5), radius: 4, x: 4, y: 4))
+            )
     }
 }
+
+

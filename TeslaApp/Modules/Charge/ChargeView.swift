@@ -133,9 +133,8 @@ struct ChargeView: View {
     
     var chargersView: some View {
         RoundedRectangle(cornerRadius: 40)
-            .fill(Color.rectangleBackground)
-            .frame(height: 130)
             .neumorphismSelectedStyle()
+            .frame(height: 130)
             .overlay(
                 HStack {
                     Text(Constants.nearbyChargers)
