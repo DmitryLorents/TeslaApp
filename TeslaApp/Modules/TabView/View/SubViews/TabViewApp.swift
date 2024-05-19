@@ -34,7 +34,7 @@ struct TabViewApp<Content: View> : View {
             .background(
                 TabBarShape()
                     .fill(Color.black)
-                    .shadow(color: .darkElement, radius: 1)
+                    .shadow(color: .darkElement.opacity(0.1), radius: 3)
                     .frame(width: UIScreen.main.bounds.width, height: tabBarHeight)
 
                 

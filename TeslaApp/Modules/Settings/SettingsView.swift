@@ -9,6 +9,15 @@ import SwiftUI
 
 struct SettingsView: View {
     
+    private enum Constants {
+        static let open = "Open"
+        static let close = "Close"
+        static let lockOpen = "lock.open.fill"
+        static let lockClosed = "lock.fill"
+        static let tesla = "Tesla"
+        static let millage = "187km"
+    }
+    
     @State var isCarClosed = false
     @State var tagSelected = 0
     @State var isMovedToClimate = false
@@ -36,27 +45,38 @@ struct SettingsView: View {
     
     var closeCarControlView: some View {
         Button {
-            withAnimation {
+            withAnimation(.linear(duration: 1)) {
                 isCarClosed.toggle()
             }
         } label: {
-            HStack(spacing: 40) {
+            HStack(spacing: 20) {
                 Label(
-                    title: { Text(isCarClosed ? "Close" : "Open")
-                        .foregroundStyle(.white)},
-                    icon: { Image(systemName: isCarClosed ? "lock.open.fill" : "lock.fill")
-                            .renderingMode(.template)
-                            .neumorphismUnselectedCircleStyle()
+                    title: { Text(isCarClosed ? Constants.close : Constants.open)
+                            .foregroundStyle(.white)
+                            .frame(width: 70)
+                    },
+                    icon: {
+                        Circle()
+                            .frame(width: 50, height: 50)
+                        
+                            .foregroundStyle(.elementBackgrpound
+                                .shadow(.inner(color: .white.opacity(0.15), radius: 6, x: 4, y: 4))
+                                .shadow(.inner(color: .black.opacity(0.5), radius: 6, x: -4, y: -4))
+                            )
+                            .overlay(
+                                Image(systemName: isCarClosed ? Constants.lockOpen : Constants.lockClosed)
+                                    .renderingMode(.template)
+                                    .foregroundStyle(.linearGradient(colors: [.gradientTop, .gradientBottom], startPoint: .top, endPoint: .bottom))
+                            )
                     }
                 )
             }
             .padding(20)
             .background(RoundedRectangle(cornerRadius: 50)
-                .fill(Color.backgroundApp))
-            .neumorphismSelectedStyle()
+                .neumorphismSelectedStyle()
+            )
         }
-        .frame(width: 300)
-
+        
     }
     
     
@@ -83,24 +103,23 @@ struct SettingsView: View {
                         .frame(width: 44, height: 44)
                         .neumorphismUnselectedCircleStyle()
                         .overlay(
-                        Circle()
-                            .stroke(gradient, lineWidth: 2)
-                            .opacity(tagSelected == index ? 1 : 0)
+                            Circle()
+                                .stroke(gradient, lineWidth: 2)
+                                .opacity(tagSelected == index ? 1 : 0)
                         )
                 }
-
+                
             }
         }
         .padding()
         .background(RoundedRectangle(cornerRadius: 50)
-//            .fill(Color.backgroundApp)
             .neumorphismUnselectedStyle()
         )
         
     }
     
     var carView: some View {
-        Image(isCarClosed ? .car : .car)
+        Image(isCarClosed ? .open : .close)
             .resizable()
             .aspectRatio(contentMode: .fill)
             .frame(height: 150)
@@ -113,11 +132,11 @@ struct SettingsView: View {
         HStack {
             
             VStack(alignment: .leading) {
-                Text("Tesla")
+                Text(Constants.tesla)
                     .font(.system(size: 28))
                     .fontWeight(.bold)
                     .foregroundStyle(.white)
-                Text("187rm")
+                Text(Constants.millage)
                     .font(.system(size: 17))
                     .fontWeight(.semibold)
                     .opacity(0.4)
@@ -133,5 +152,5 @@ struct SettingsView: View {
 
 #Preview {
     SettingsView()
-        
+    
 }
