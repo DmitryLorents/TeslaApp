@@ -24,6 +24,7 @@
 		0AC2AEE02BF28B2900C0C144 /* NeumorphismSelectedCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC2AEDF2BF28B2900C0C144 /* NeumorphismSelectedCircle.swift */; };
 		0AC2AEE32BF29CDD00C0C144 /* LockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC2AEE22BF29CDD00C0C144 /* LockView.swift */; };
 		0AC2AF012BF38AA700C0C144 /* ClimateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC2AF002BF38AA700C0C144 /* ClimateView.swift */; };
+		0AC4C0C02BFA96DE00858BE3 /* Color + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC4C0BF2BFA96DE00858BE3 /* Color + Extension.swift */; };
 		0AD371DA2BF696A400628EC5 /* TabViewApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD371D92BF696A400628EC5 /* TabViewApp.swift */; };
 		0AD371DD2BF6972600628EC5 /* TabItemPreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD371DC2BF6972600628EC5 /* TabItemPreferenceKey.swift */; };
 		0AD371DF2BF6976000628EC5 /* TabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD371DE2BF6976000628EC5 /* TabItem.swift */; };
@@ -53,6 +54,7 @@
 		0AC2AEDF2BF28B2900C0C144 /* NeumorphismSelectedCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeumorphismSelectedCircle.swift; sourceTree = "<group>"; };
 		0AC2AEE22BF29CDD00C0C144 /* LockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockView.swift; sourceTree = "<group>"; };
 		0AC2AF002BF38AA700C0C144 /* ClimateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClimateView.swift; sourceTree = "<group>"; };
+		0AC4C0BF2BFA96DE00858BE3 /* Color + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color + Extension.swift"; sourceTree = "<group>"; };
 		0AD371D92BF696A400628EC5 /* TabViewApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewApp.swift; sourceTree = "<group>"; };
 		0AD371DC2BF6972600628EC5 /* TabItemPreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItemPreferenceKey.swift; sourceTree = "<group>"; };
 		0AD371DE2BF6976000628EC5 /* TabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItem.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				0AC2AED42BF27D7E00C0C144 /* View + Extension.swift */,
+				0AC4C0BF2BFA96DE00858BE3 /* Color + Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -353,6 +356,7 @@
 				0AC2AED52BF27D7E00C0C144 /* View + Extension.swift in Sources */,
 				0AEDA39B2BF62BEC00A38A41 /* ChargeView.swift in Sources */,
 				0AD371DD2BF6972600628EC5 /* TabItemPreferenceKey.swift in Sources */,
+				0AC4C0C02BFA96DE00858BE3 /* Color + Extension.swift in Sources */,
 				0AC2AEDE2BF27E3C00C0C144 /* NeumorphismUnselectedCircle.swift in Sources */,
 				0A2633322BF3F485005B3096 /* BottomMenu.swift in Sources */,
 				0AC2AF012BF38AA700C0C144 /* ClimateView.swift in Sources */,

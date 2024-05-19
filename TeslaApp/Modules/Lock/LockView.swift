@@ -27,45 +27,42 @@ struct LockVIew: View {
     var body: some View {
         backgroundStackView(gradient: gradient) {
             
-                VStack {
-                    
-                    HStack {
-                        Spacer()
-                        NavigationLink(destination: MainTabView()) {
-                            Image(.settings)
-                                .resizable()
-                                .frame(width: 22, height: 22)
-                                .padding()
-                                .neumorphismSelectedCircleStyle()
-                        }
-                        
+            VStack {
+                
+                HStack {
+                    //                    Spacer()
+                    NavigationLink(destination: MainTabView()) {
+                        UnselectedButton(image: .settings)
                     }
-                    .padding(.horizontal, 30)
-                    .padding(.top, 20)
-                    
-                    Spacer()
-                        .frame(height: 50)
-                    
-                    welcomeTextView
-                    
-                    Image(isLocked ? .carLocked : .carUnlocked)
-                        .resizable()
-                        .frame(maxWidth: .infinity)
-                        .aspectRatio(contentMode: .fit)
-                    
-                    Spacer()
-                    
-                    
-                    lockView
-                    
-                    Spacer()
-                        .frame(height: 115)
                     
                 }
+                .padding(.horizontal, 30)
+                .padding(.top, 20)
+                
+                Spacer()
+                    .frame(height: 50)
+                
+                welcomeTextView
+                
+                Image(isLocked ? .carLocked : .carUnlocked)
+                    .resizable()
+                    .frame(maxWidth: .infinity)
+                    .aspectRatio(contentMode: .fit)
+                
+                Spacer()
+                
+                
+                lockView
+                
+                Spacer()
+                    .frame(height: 115)
+                
             }
+        }
         .navigationBarBackButtonHidden()
-
+        
     }
+    
     
     private var lockView: some View {
         HStack(spacing: 20) {
@@ -88,11 +85,11 @@ struct LockVIew: View {
         }
         .padding(.horizontal, 30)
         .padding(.vertical, 15)
-            .background(Capsule()
-                .foregroundStyle(.bottomSheetBottomGradient
-                    .shadow(.inner(color: .white.opacity(0.15), radius: 4, x: -4, y: -4))
-                    .shadow(.inner(color: .black.opacity(0.5), radius: 4, x: 4, y: 4))
-                )
+        .background(Capsule()
+            .foregroundStyle(.bottomSheetBottomGradient
+                .shadow(.inner(color: .white.opacity(0.15), radius: 4, x: -4, y: -4))
+                .shadow(.inner(color: .black.opacity(0.5), radius: 4, x: 4, y: 4))
+            )
                 .frame(width: 200))
     }
     
@@ -111,4 +108,71 @@ struct LockVIew: View {
 
 #Preview {
     LockVIew()
+}
+
+
+struct UnselectedButton: View {
+    var image: ImageResource
+    
+    var body: some View {
+        Circle()
+            .frame(width: 62, height: 62)
+            .foregroundStyle(LinearGradient(colors: [.unselectedCircleTop, .unselectedCircleBottom], startPoint: .topLeading, endPoint: .bottomTrailing)
+                .shadow(.drop(color: .black.opacity(0.25), radius: 20, x: 10, y: 10))
+            )
+            .blur(radius: 20)
+            .overlay(
+            Circle()
+                .frame(width: 50, height: 50)
+                .foregroundStyle(.radialGradient(colors: [Color(hex: "3E4145"), Color(hex: "232629")], center: .center, startRadius: 0, endRadius: 50)
+                    .shadow(.inner(color: .black.opacity(0.35), radius: 3, x: 0, y: 2))
+                                )
+                .overlay(
+                    Circle()
+                        .stroke(LinearGradient(colors: [Color(hex: "1C1D1F"), Color(hex: "303438")], startPoint: .topLeading, endPoint: .bottomTrailing), style: .init(lineWidth: 3))
+                        .shadow(color: .black.opacity(0.35), radius: 4, x: 0, y: 4)
+                        .frame(width: 50, height: 50)
+                        
+                )
+                .overlay(
+                    Image(.settings)
+                        
+                )
+            
+            )
+        //        // Image
+        //        Image(image)
+        //            .resizable()
+        //            .frame(width: 22, height: 22)
+        //            .padding()
+        //            .padding(.all, 8)
+        //            .background(Circle()
+        //
+        //                .foregroundStyle(.elementBackgrpound
+        //                    .shadow(.inner(color: .white.opacity(0.15), radius: 8, x: 4, y: 4))
+        //                    .shadow(.inner(color: .black.opacity(0.5), radius: 8, x: -4, y: -4))
+        //
+        //
+        //                )
+        //                    .background(
+        //                        Circle()
+        //
+        //                            .stroke(LinearGradient(colors: [.black, .white.opacity(0.25)], startPoint: .topLeading, endPoint: .bottomTrailing), style: .init(lineWidth: 4))
+        //                            .frame(width: 80, height: 80)
+        //                            .padding(10)
+        
+        //                                            .background(
+        //                                                Circle()
+        //                                                    .frame(width: 100, height: 100)
+        //                                                    .foregroundStyle(LinearGradient(colors: [.unselectedCircleTop, .unselectedCircleBottom], startPoint: .topLeading, endPoint: .bottomTrailing)
+        //                                                        .shadow(.inner(color: .white.opacity(0.15), radius: 8, x: 4, y: 4))
+        //                                                        .shadow(.inner(color: .black.opacity(0.5), radius: 8, x: -4, y: -4)))
+        //
+        //
+        //                                            )
+        //                                            .blur(radius: 1)
+        
+        //                    )
+        
+    }
 }
