@@ -35,7 +35,7 @@ extension View {
     }
     
     func makeGreenBlueGradient() -> LinearGradient {
-        LinearGradient(colors: [.gradientTop, .gradientBottom], startPoint: .bottom, endPoint: .top)
+        LinearGradient(colors: [.gradientTop, .gradientBottom], startPoint: .top, endPoint: .bottom)
     }
     
     func tabItemApp(_ label: () -> TabItem) -> some View {

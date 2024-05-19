@@ -11,7 +11,9 @@ struct NeumorphismSelectedCircle: ViewModifier {
     func body(content: Content) -> some View {
         content
             .padding(.all, 10)
-            .background(Circle().fill(Color.backgroundApp))
-            .neumorphismSelectedStyle()
+            .background(Circle()
+                .neumorphismSelectedStyle()
+            )
+           
     }
 }

@@ -80,18 +80,19 @@ struct LockVIew: View {
             },
                    label: {
                 Image(systemName: isLocked ? Constants.lockClosed : Constants.lockOpen)
-                    .padding(3)
-                    .neumorphismUnselectedCircleStyle()
-                    .font(.system(size: 22, weight: .semibold))
                     .foregroundStyle(makeGreenBlueGradient())
+                    .padding(3)
+                    .font(.system(size: 22, weight: .semibold))
+                    .neumorphismUnselectedCircleStyle()
             })
         }
         .padding(.horizontal, 30)
         .padding(.vertical, 15)
             .background(Capsule()
-                .neumorphismSelectedStyle()
-                        
-//                .fill(Color.bottomSheetTopGradient)
+                .foregroundStyle(.bottomSheetBottomGradient
+                    .shadow(.inner(color: .white.opacity(0.15), radius: 4, x: -4, y: -4))
+                    .shadow(.inner(color: .black.opacity(0.5), radius: 4, x: 4, y: 4))
+                )
                 .frame(width: 200))
     }
     
