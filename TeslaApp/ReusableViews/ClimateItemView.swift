@@ -21,7 +21,7 @@ struct ClimateItemView:  View {
             Text(text)
                 .frame(width: 40, alignment: .leading)
             Spacer()
-                .frame(width: 20)
+                .frame(width: 5)
             
             Circle()
                 .fill(LinearGradient(colors: [Color(hex: "141515"), Color(hex: "2E3236")], startPoint: .bottomTrailing, endPoint: .topLeading))

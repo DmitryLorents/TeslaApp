@@ -70,11 +70,8 @@ struct ChargeView: View {
                 Button(action: {
                     
                 }, label: {
-                    Image(.settings)
-                        .resizable()
-                        .frame(width: 22, height: 22)
-                        .padding()
-                        .neumorphismSelectedCircleStyle()
+                    
+                    UnselectedButtonView(image: Image(.settings))
                 })
                 
             
@@ -142,12 +139,7 @@ struct ChargeView: View {
                     Button(action: {
                         
                     }, label: {
-                        Image(systemName: Constants.up)
-                            .font(.title)
-                            .foregroundStyle(.darkElement)
-                            .padding()
-                            .neumorphismSelectedCircleStyle()
-                            .offset(x: 10.0)
+                        UnselectedButtonView(image: Image(systemName: Constants.up))
                     })
                 }
                     .font(.system(size: 18, weight: .semibold))

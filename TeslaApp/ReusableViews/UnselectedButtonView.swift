@@ -38,7 +38,7 @@ struct UnselectedButtonView: View {
                         LinearGradient(
                             colors: [Color(hex: "1C1D1F"), Color(hex: "303438")], startPoint: .topLeading,
                             endPoint: .bottomTrailing),
-                        style: .init(lineWidth: 3)
+                        style: .init(lineWidth: 1.5)
                     )
                     .shadow(color: .black.opacity(0.35), radius: 4, x: 0, y: 4)
                     .frame(width: 50, height: 50)
@@ -54,3 +54,6 @@ struct UnselectedButtonView: View {
     }
 }
 
+#Preview {
+    ChargeView()
+}
