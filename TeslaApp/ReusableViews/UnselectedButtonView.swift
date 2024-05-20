@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct UnselectedButtonView: View {
-    var image: ImageResource
+    var image: Image
+    
     
     var body: some View {
         Circle()
@@ -45,7 +46,9 @@ struct UnselectedButtonView: View {
             )
         
             .overlay(
-                Image(image)
+                image
+                    .renderingMode(.template)
+                    .foregroundStyle(Color(hex: "7F8493"))
             )
         
     }

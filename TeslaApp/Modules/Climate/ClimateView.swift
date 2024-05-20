@@ -102,11 +102,7 @@ struct ClimateView: View {
             Button {
                 dismiss()
             } label: {
-                Image(systemName: Constants.backButton)
-                    .foregroundStyle(.darkElement)
-                    .padding()
-                    .neumorphismSelectedCircleStyle()
-                
+                UnselectedButtonView(image: Image(systemName: Constants.backButton))
                 Spacer()
                 
                 Text(Constants.climate)
@@ -119,11 +115,7 @@ struct ClimateView: View {
                         isAlertShown = true
                     }
                 }, label: {
-                    Image(.settings)
-                        .resizable()
-                        .frame(width: 22, height: 22)
-                        .padding()
-                        .neumorphismSelectedCircleStyle()
+                    UnselectedButtonView(image: Image(.settings))
                 })
                 
             }

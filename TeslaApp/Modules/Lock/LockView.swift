@@ -32,7 +32,7 @@ struct LockVIew: View {
                 HStack {
                     Spacer()
                     NavigationLink(destination: MainTabView()) {
-                        UnselectedButtonView(image: .settings)
+                        UnselectedButtonView(image: Image(.settings))
                     }
                     
                 }
