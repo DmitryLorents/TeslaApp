@@ -35,7 +35,8 @@ struct ClimateView: View {
     
     var body: some View {
         ZStack {
-            
+            Color(hex: "26282C")
+                .ignoresSafeArea()
             VStack {
                 navBarView
                 ScrollView {
@@ -133,9 +134,12 @@ struct ClimateView: View {
     
     var climateCircleView: some View {
         Circle()
-            .fill(.black)
             .frame(width: 168)
-            .neumorphismUnselectedStyle()
+            .foregroundStyle(LinearGradient(colors: [Color(hex: "2B2F33"), Color(hex: "111315")], startPoint: .topLeading, endPoint: .bottomTrailing)
+                .shadow(.drop(color: Color(hex: "141414"), radius: 60, x: 18, y: 18))
+                .shadow(.drop(color: Color(hex: "485057"), radius: 60, x: -18, y: -18))
+            )
+
             .padding(4)
             .overlay(
                 Circle()
@@ -148,7 +152,11 @@ struct ClimateView: View {
             )
             .overlay(
                 Circle()
-                    .fill(LinearGradient(colors: [.lightShadow, .darkShadow], startPoint: .bottomTrailing, endPoint: .topLeading))
+                    .fill(Color(hex: "32363B")
+                        .shadow(.inner(color: .white.opacity(0.05), radius: 2, x: 2, y: 1))
+                        .shadow(.inner(color: Color(hex: "3B4451").opacity(0.5), radius: 66, x: -26, y: -26))
+                        .shadow(.inner(color: .black.opacity(0.55), radius: 81, x: 26, y: 26))
+                         )
                     .frame(width: 120)
             )
             .overlay(
