@@ -48,7 +48,7 @@ struct UnselectedButtonView: View {
             .overlay(
                 image
                     .renderingMode(.template)
-                    .foregroundStyle(Color(hex: "7F8493"))
+                    .foregroundStyle(Color(hex: "97979D"))
             )
         
     }

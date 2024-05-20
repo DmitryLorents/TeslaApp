@@ -22,18 +22,20 @@ struct ClimateItemView:  View {
                 .frame(width: 40, alignment: .leading)
             Spacer()
                 .frame(width: 20)
-            Image(image)
-                .renderingMode(.template)
-                .resizable()
+            
+            Circle()
+                .fill(LinearGradient(colors: [Color(hex: "141515"), Color(hex: "2E3236")], startPoint: .bottomTrailing, endPoint: .topLeading))
+                .stroke(Color(hex: "282B2E"), style: .init(lineWidth: 1))
                 .frame(width: 50, height: 50)
-                .padding(.zero)
-                .neumorphismSelectedCircleStyle()
-                .foregroundStyle(isOn ? .blue : .darkElement)
+                .overlay(
+                    Image(image)
+                        .renderingMode(.template)
+                        .foregroundStyle(isOn ? .blue : .darkElement)
+                )
             
             Spacer()
                 .frame(width: 30)
             SliderView(value: $value, range: range, thumbImage: .knob, minTrackColor: minTrackColor)
-//            Slider(value: $value, in: range)
         }
         .tint(.orange)
         .padding(.top, 20)
