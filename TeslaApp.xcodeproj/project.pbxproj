@@ -7,18 +7,64 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A158E892BF73BCE0048B710 /* TabBarShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A158E882BF73BCE0048B710 /* TabBarShape.swift */; };
+		0A158E8D2BF773060048B710 /* UnderDevelopmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A158E8C2BF773060048B710 /* UnderDevelopmentView.swift */; };
+		0A158E902BF781BB0048B710 /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A158E8F2BF781BB0048B710 /* SliderView.swift */; };
+		0A26332D2BF3E6EB005B3096 /* ClimateItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A26332C2BF3E6EB005B3096 /* ClimateItemView.swift */; };
+		0A2633302BF3E93C005B3096 /* BottomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A26332F2BF3E93C005B3096 /* BottomSheet.swift */; };
+		0A2633322BF3F485005B3096 /* BottomMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2633312BF3F485005B3096 /* BottomMenu.swift */; };
 		0AC2AEC62BF27A0200C0C144 /* TeslaAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC2AEC52BF27A0200C0C144 /* TeslaAppApp.swift */; };
-		0AC2AEC82BF27A0200C0C144 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC2AEC72BF27A0200C0C144 /* ContentView.swift */; };
+		0AC2AEC82BF27A0200C0C144 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC2AEC72BF27A0200C0C144 /* SettingsView.swift */; };
 		0AC2AECA2BF27A0400C0C144 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AC2AEC92BF27A0400C0C144 /* Assets.xcassets */; };
 		0AC2AECD2BF27A0400C0C144 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AC2AECC2BF27A0400C0C144 /* Preview Assets.xcassets */; };
+		0AC2AED52BF27D7E00C0C144 /* View + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC2AED42BF27D7E00C0C144 /* View + Extension.swift */; };
+		0AC2AED82BF27DBD00C0C144 /* NeumorphismUnselected.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC2AED72BF27DBD00C0C144 /* NeumorphismUnselected.swift */; };
+		0AC2AEDC2BF27E1D00C0C144 /* NeumorphismSelected.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC2AEDB2BF27E1D00C0C144 /* NeumorphismSelected.swift */; };
+		0AC2AEDE2BF27E3C00C0C144 /* NeumorphismUnselectedCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC2AEDD2BF27E3C00C0C144 /* NeumorphismUnselectedCircle.swift */; };
+		0AC2AEE02BF28B2900C0C144 /* NeumorphismSelectedCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC2AEDF2BF28B2900C0C144 /* NeumorphismSelectedCircle.swift */; };
+		0AC2AEE32BF29CDD00C0C144 /* LockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC2AEE22BF29CDD00C0C144 /* LockView.swift */; };
+		0AC2AF012BF38AA700C0C144 /* ClimateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC2AF002BF38AA700C0C144 /* ClimateView.swift */; };
+		0AC4C0C02BFA96DE00858BE3 /* Color + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC4C0BF2BFA96DE00858BE3 /* Color + Extension.swift */; };
+		0AC4C0C32BFA9CDE00858BE3 /* UnselectedButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC4C0C22BFA9CDE00858BE3 /* UnselectedButtonView.swift */; };
+		0AD371DA2BF696A400628EC5 /* TabViewApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD371D92BF696A400628EC5 /* TabViewApp.swift */; };
+		0AD371DD2BF6972600628EC5 /* TabItemPreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD371DC2BF6972600628EC5 /* TabItemPreferenceKey.swift */; };
+		0AD371DF2BF6976000628EC5 /* TabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD371DE2BF6976000628EC5 /* TabItem.swift */; };
+		0AD371E22BF6983E00628EC5 /* TabItemModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD371E12BF6983E00628EC5 /* TabItemModifier.swift */; };
+		0AD371E62BF6A50B00628EC5 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD371E52BF6A50B00628EC5 /* MainTabView.swift */; };
+		0AEDA3952BF5CC3200A38A41 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEDA3942BF5CC3200A38A41 /* SplashScreenView.swift */; };
+		0AEDA3982BF5CCD100A38A41 /* LogoShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEDA3972BF5CCD100A38A41 /* LogoShape.swift */; };
+		0AEDA39B2BF62BEC00A38A41 /* ChargeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEDA39A2BF62BEC00A38A41 /* ChargeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A158E882BF73BCE0048B710 /* TabBarShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarShape.swift; sourceTree = "<group>"; };
+		0A158E8C2BF773060048B710 /* UnderDevelopmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderDevelopmentView.swift; sourceTree = "<group>"; };
+		0A158E8F2BF781BB0048B710 /* SliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
+		0A26332C2BF3E6EB005B3096 /* ClimateItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClimateItemView.swift; sourceTree = "<group>"; };
+		0A26332F2BF3E93C005B3096 /* BottomSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheet.swift; sourceTree = "<group>"; };
+		0A2633312BF3F485005B3096 /* BottomMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomMenu.swift; sourceTree = "<group>"; };
 		0AC2AEC22BF27A0200C0C144 /* TeslaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeslaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AC2AEC52BF27A0200C0C144 /* TeslaAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeslaAppApp.swift; sourceTree = "<group>"; };
-		0AC2AEC72BF27A0200C0C144 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		0AC2AEC72BF27A0200C0C144 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		0AC2AEC92BF27A0400C0C144 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0AC2AECC2BF27A0400C0C144 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0AC2AED42BF27D7E00C0C144 /* View + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View + Extension.swift"; sourceTree = "<group>"; };
+		0AC2AED72BF27DBD00C0C144 /* NeumorphismUnselected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeumorphismUnselected.swift; sourceTree = "<group>"; };
+		0AC2AEDB2BF27E1D00C0C144 /* NeumorphismSelected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeumorphismSelected.swift; sourceTree = "<group>"; };
+		0AC2AEDD2BF27E3C00C0C144 /* NeumorphismUnselectedCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeumorphismUnselectedCircle.swift; sourceTree = "<group>"; };
+		0AC2AEDF2BF28B2900C0C144 /* NeumorphismSelectedCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeumorphismSelectedCircle.swift; sourceTree = "<group>"; };
+		0AC2AEE22BF29CDD00C0C144 /* LockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockView.swift; sourceTree = "<group>"; };
+		0AC2AF002BF38AA700C0C144 /* ClimateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClimateView.swift; sourceTree = "<group>"; };
+		0AC4C0BF2BFA96DE00858BE3 /* Color + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color + Extension.swift"; sourceTree = "<group>"; };
+		0AC4C0C22BFA9CDE00858BE3 /* UnselectedButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnselectedButtonView.swift; sourceTree = "<group>"; };
+		0AD371D92BF696A400628EC5 /* TabViewApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewApp.swift; sourceTree = "<group>"; };
+		0AD371DC2BF6972600628EC5 /* TabItemPreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItemPreferenceKey.swift; sourceTree = "<group>"; };
+		0AD371DE2BF6976000628EC5 /* TabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItem.swift; sourceTree = "<group>"; };
+		0AD371E12BF6983E00628EC5 /* TabItemModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItemModifier.swift; sourceTree = "<group>"; };
+		0AD371E52BF6A50B00628EC5 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		0AEDA3942BF5CC3200A38A41 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
+		0AEDA3972BF5CCD100A38A41 /* LogoShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoShape.swift; sourceTree = "<group>"; };
+		0AEDA39A2BF62BEC00A38A41 /* ChargeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +78,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A158E8A2BF750540048B710 /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				0AD371D92BF696A400628EC5 /* TabViewApp.swift */,
+				0A158E882BF73BCE0048B710 /* TabBarShape.swift */,
+			);
+			path = SubViews;
+			sourceTree = "<group>";
+		};
+		0A158E8B2BF772EF0048B710 /* UnderDevelopment */ = {
+			isa = PBXGroup;
+			children = (
+				0A158E8C2BF773060048B710 /* UnderDevelopmentView.swift */,
+			);
+			path = UnderDevelopment;
+			sourceTree = "<group>";
+		};
+		0A26332E2BF3E92C005B3096 /* SubView */ = {
+			isa = PBXGroup;
+			children = (
+				0A26332F2BF3E93C005B3096 /* BottomSheet.swift */,
+				0A2633312BF3F485005B3096 /* BottomMenu.swift */,
+			);
+			path = SubView;
+			sourceTree = "<group>";
+		};
 		0AC2AEB92BF27A0200C0C144 = {
 			isa = PBXGroup;
 			children = (
@@ -51,8 +123,10 @@
 		0AC2AEC42BF27A0200C0C144 /* TeslaApp */ = {
 			isa = PBXGroup;
 			children = (
-				0AC2AEC52BF27A0200C0C144 /* TeslaAppApp.swift */,
-				0AC2AEC72BF27A0200C0C144 /* ContentView.swift */,
+				0AC2AED92BF27DC800C0C144 /* App */,
+				0AC2AED62BF27D9600C0C144 /* Modifiers */,
+				0AC2AED32BF27D5E00C0C144 /* Extensions */,
+				0AC2AEDA2BF27DE000C0C144 /* Modules */,
 				0AC2AEC92BF27A0400C0C144 /* Assets.xcassets */,
 				0AC2AECB2BF27A0400C0C144 /* Preview Content */,
 			);
@@ -65,6 +139,137 @@
 				0AC2AECC2BF27A0400C0C144 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		0AC2AED32BF27D5E00C0C144 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0AC2AED42BF27D7E00C0C144 /* View + Extension.swift */,
+				0AC4C0BF2BFA96DE00858BE3 /* Color + Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		0AC2AED62BF27D9600C0C144 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				0AC2AED72BF27DBD00C0C144 /* NeumorphismUnselected.swift */,
+				0AC2AEDB2BF27E1D00C0C144 /* NeumorphismSelected.swift */,
+				0AC2AEDD2BF27E3C00C0C144 /* NeumorphismUnselectedCircle.swift */,
+				0AC2AEDF2BF28B2900C0C144 /* NeumorphismSelectedCircle.swift */,
+				0AD371E12BF6983E00628EC5 /* TabItemModifier.swift */,
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
+		0AC2AED92BF27DC800C0C144 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				0AC2AEC52BF27A0200C0C144 /* TeslaAppApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		0AC2AEDA2BF27DE000C0C144 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				0AC4C0C12BFA9CB100858BE3 /* ReusableViews */,
+				0A158E8B2BF772EF0048B710 /* UnderDevelopment */,
+				0AD371D82BF6965F00628EC5 /* TabView */,
+				0AEDA3992BF62BDA00A38A41 /* Charge */,
+				0AEDA3932BF5CC1800A38A41 /* SplashScreen */,
+				0AC2AEFF2BF38A9700C0C144 /* Climate */,
+				0AC2AEE12BF29CC300C0C144 /* Lock */,
+				0AC2AEE42BF29FBD00C0C144 /* Settings */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		0AC2AEE12BF29CC300C0C144 /* Lock */ = {
+			isa = PBXGroup;
+			children = (
+				0AC2AEE22BF29CDD00C0C144 /* LockView.swift */,
+			);
+			path = Lock;
+			sourceTree = "<group>";
+		};
+		0AC2AEE42BF29FBD00C0C144 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				0AC2AEC72BF27A0200C0C144 /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		0AC2AEFF2BF38A9700C0C144 /* Climate */ = {
+			isa = PBXGroup;
+			children = (
+				0AC2AF002BF38AA700C0C144 /* ClimateView.swift */,
+				0A26332E2BF3E92C005B3096 /* SubView */,
+			);
+			path = Climate;
+			sourceTree = "<group>";
+		};
+		0AC4C0C12BFA9CB100858BE3 /* ReusableViews */ = {
+			isa = PBXGroup;
+			children = (
+				0A158E8F2BF781BB0048B710 /* SliderView.swift */,
+				0A26332C2BF3E6EB005B3096 /* ClimateItemView.swift */,
+				0AC4C0C22BFA9CDE00858BE3 /* UnselectedButtonView.swift */,
+			);
+			path = ReusableViews;
+			sourceTree = "<group>";
+		};
+		0AD371D82BF6965F00628EC5 /* TabView */ = {
+			isa = PBXGroup;
+			children = (
+				0AD371DB2BF6970C00628EC5 /* Model */,
+				0AD371E02BF697E900628EC5 /* View */,
+			);
+			path = TabView;
+			sourceTree = "<group>";
+		};
+		0AD371DB2BF6970C00628EC5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0AD371DC2BF6972600628EC5 /* TabItemPreferenceKey.swift */,
+				0AD371DE2BF6976000628EC5 /* TabItem.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0AD371E02BF697E900628EC5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0AD371E52BF6A50B00628EC5 /* MainTabView.swift */,
+				0A158E8A2BF750540048B710 /* SubViews */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0AEDA3932BF5CC1800A38A41 /* SplashScreen */ = {
+			isa = PBXGroup;
+			children = (
+				0AEDA3942BF5CC3200A38A41 /* SplashScreenView.swift */,
+				0AEDA3962BF5CCAE00A38A41 /* SubVew */,
+			);
+			path = SplashScreen;
+			sourceTree = "<group>";
+		};
+		0AEDA3962BF5CCAE00A38A41 /* SubVew */ = {
+			isa = PBXGroup;
+			children = (
+				0AEDA3972BF5CCD100A38A41 /* LogoShape.swift */,
+			);
+			path = SubVew;
+			sourceTree = "<group>";
+		};
+		0AEDA3992BF62BDA00A38A41 /* Charge */ = {
+			isa = PBXGroup;
+			children = (
+				0AEDA39A2BF62BEC00A38A41 /* ChargeView.swift */,
+			);
+			path = Charge;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +342,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0AC2AEC82BF27A0200C0C144 /* ContentView.swift in Sources */,
+				0AC2AEE02BF28B2900C0C144 /* NeumorphismSelectedCircle.swift in Sources */,
+				0AEDA3952BF5CC3200A38A41 /* SplashScreenView.swift in Sources */,
+				0AC2AEC82BF27A0200C0C144 /* SettingsView.swift in Sources */,
+				0A2633302BF3E93C005B3096 /* BottomSheet.swift in Sources */,
+				0AD371E22BF6983E00628EC5 /* TabItemModifier.swift in Sources */,
+				0A158E8D2BF773060048B710 /* UnderDevelopmentView.swift in Sources */,
+				0AC2AED82BF27DBD00C0C144 /* NeumorphismUnselected.swift in Sources */,
+				0AC2AEDC2BF27E1D00C0C144 /* NeumorphismSelected.swift in Sources */,
+				0AC4C0C32BFA9CDE00858BE3 /* UnselectedButtonView.swift in Sources */,
+				0A158E902BF781BB0048B710 /* SliderView.swift in Sources */,
+				0AEDA3982BF5CCD100A38A41 /* LogoShape.swift in Sources */,
+				0A158E892BF73BCE0048B710 /* TabBarShape.swift in Sources */,
 				0AC2AEC62BF27A0200C0C144 /* TeslaAppApp.swift in Sources */,
+				0AD371DF2BF6976000628EC5 /* TabItem.swift in Sources */,
+				0AC2AEE32BF29CDD00C0C144 /* LockView.swift in Sources */,
+				0AC2AED52BF27D7E00C0C144 /* View + Extension.swift in Sources */,
+				0AEDA39B2BF62BEC00A38A41 /* ChargeView.swift in Sources */,
+				0AD371DD2BF6972600628EC5 /* TabItemPreferenceKey.swift in Sources */,
+				0AC4C0C02BFA96DE00858BE3 /* Color + Extension.swift in Sources */,
+				0AC2AEDE2BF27E3C00C0C144 /* NeumorphismUnselectedCircle.swift in Sources */,
+				0A2633322BF3F485005B3096 /* BottomMenu.swift in Sources */,
+				0AC2AF012BF38AA700C0C144 /* ClimateView.swift in Sources */,
+				0AD371DA2BF696A400628EC5 /* TabViewApp.swift in Sources */,
+				0A26332D2BF3E6EB005B3096 /* ClimateItemView.swift in Sources */,
+				0AD371E62BF6A50B00628EC5 /* MainTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
