@@ -1,4 +1,4 @@
-# 🚗 Tesla App  ![version](https://img.shields.io/badge/v1.0-release-green?link=release)
+# 🚗 Tesla App   ![version](https://img.shields.io/badge/v1.0-release-green?link=release)
 
 ---
 
@@ -14,20 +14,17 @@
 
 ## Screenshots
 <p align="center">
-<img src="" width="140"/> <img src="" width="140"/>  <img src="" width="140"/> 
+<img src="https://github.com/DmitryLorents/TeslaApp/blob/main/TeslaApp/Assets.xcassets/Images/Preview/splash.imageset/splash.png" width="140"/> <img src="https://github.com/DmitryLorents/TeslaApp/blob/main/TeslaApp/Assets.xcassets/Images/Preview/lock.imageset/lock.png" width="140"/>  <img src="https://github.com/DmitryLorents/TeslaApp/blob/main/TeslaApp/Assets.xcassets/Images/Preview/settings.imageset/settings.png" width="140"/> 
 </p>
 
 <p align="center">
-  <img src="" width="140"/>  <img src="" width="140"/>  <img src="" width="140"/>
+  <img src="https://github.com/DmitryLorents/TeslaApp/blob/main/TeslaApp/Assets.xcassets/Images/Preview/climate.imageset/climate.png" width="140"/>  <img src="https://github.com/DmitryLorents/TeslaApp/blob/main/TeslaApp/Assets.xcassets/Images/Preview/charging.imageset/charging.png" width="140"/>
 </p>
-
-<p align="center">
-  <img src="https://github.com/DmitryLorents/Recepies/blob/develop/Recepies/SupportingFiles/Assets.xcassets/Preview/Terms.imageset/Terms.png" width="140"/>  <img src="https://github.com/DmitryLorents/Recepies/blob/develop/Recepies/SupportingFiles/Assets.xcassets/Preview/Partners%201.imageset/Partners.png" width="140"/>
 
 ## Video demonstration of the application
 
 <p align="center">
-  <img src="https://github.com/DmitryLorents/Recepies/blob/develop/Recepies/SupportingFiles/Assets.xcassets/Preview/video.dataset/video.gif" width="300"/>
+  <img src="https://github.com/DmitryLorents/TeslaApp/blob/main/TeslaApp/Assets.xcassets/Images/Preview/video.dataset/video.gif" width="300"/>
 </p>
 
 
@@ -35,8 +32,7 @@
 
 ## Description
 
-Recipes App is your personal assistant in the kitchen. Find popular recipes, sort them by calories of cookong time and save to favorites!
-The application contains a large selection of popular dishes in different categories. You have the opportunity to follow changes in your favorite chefs. My Recipe Book is also an excellent book for storing your own recipes: you can specify the composition, number of servings and cooking time. It's time to surprise your friends!
+Tesla App allows you to have full control on your Tesla car. You can lock/unlock security system. There's climate screen with full control on climate settings. Charhe screen shows you current battery status and provide possibility to set charge limit. Other functionalities are under development.
 
 
 
