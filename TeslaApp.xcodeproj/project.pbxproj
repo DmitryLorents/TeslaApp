@@ -123,7 +123,6 @@
 		0AC2AEC42BF27A0200C0C144 /* TeslaApp */ = {
 			isa = PBXGroup;
 			children = (
-				0AC4C0C12BFA9CB100858BE3 /* ReusableViews */,
 				0AC2AED92BF27DC800C0C144 /* App */,
 				0AC2AED62BF27D9600C0C144 /* Modifiers */,
 				0AC2AED32BF27D5E00C0C144 /* Extensions */,
@@ -174,6 +173,7 @@
 		0AC2AEDA2BF27DE000C0C144 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				0AC4C0C12BFA9CB100858BE3 /* ReusableViews */,
 				0A158E8B2BF772EF0048B710 /* UnderDevelopment */,
 				0AD371D82BF6965F00628EC5 /* TabView */,
 				0AEDA3992BF62BDA00A38A41 /* Charge */,
